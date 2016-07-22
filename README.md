@@ -1,4 +1,6 @@
-# Victory Core Native
+# Victory Native
+
+This package imports components from `victory-core-native`, `victory-pie-native`, and `victory-chart-native`
 
 ```sh
 $ npm install
