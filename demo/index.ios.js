@@ -18,6 +18,7 @@ import {
   VictoryArea,
   VictoryAxis,
   VictoryBar,
+  VictoryCandlestick,
   VictoryChart,
   VictoryGroup,
   VictoryLine,
@@ -44,6 +45,17 @@ const styles = StyleSheet.create({
     marginBottom: 30
   }
 });
+
+const candleData = [
+  {x: 1, open: 9, close: 30, high: 56, low: 7},
+  {x: 2, open: 80, close: 40, high: 120, low: 10},
+  {x: 3, open: 50, close: 80, high: 90, low: 20},
+  {x: 4, open: 70, close: 22, high: 70, low: 5},
+  {x: 5, open: 20, close: 35, high: 50, low: 10},
+  {x: 6, open: 35, close: 30, high: 40, low: 3},
+  {x: 7, open: 30, close: 90, high: 95, low: 30},
+  {x: 8, open: 80, close: 81, high: 83, low: 75}
+];
 
 class Demo extends Component {
   constructor(props) {
@@ -203,6 +215,8 @@ class Demo extends Component {
         <Text style={styles.text}>{"<VictoryChart/>"}</Text>
 
         <VictoryChart><VictoryBar/><VictoryLine/></VictoryChart>
+
+        <VictoryChart><VictoryCandlestick data={candleData}/></VictoryChart>
 
         <VictoryChart domain={{x: [0, 4]}}>
           <VictoryGroup
