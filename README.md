@@ -3,6 +3,34 @@
 
 This package imports components from `victory-core-native`, `victory-pie-native`, and `victory-chart-native`
 
+# Usage
+With npm, run:
+```sh
+$ npm install victory-native --save
+```
+Link react-native-svg with:
+```sh
+$ react-native link react-native-svg
+```
+
+Import charts from `victory-native`. E.g.,
+```jsx
+import React, { Component } from 'react';
+
+import { VictoryBar } from "victory-native";
+
+class App extends Component {
+  render() {
+    return (
+      <VictoryBar />
+    );
+  }
+}
+
+export default App;
+```
+
+### Running demo
 ```sh
 $ npm install
 $ npm start
