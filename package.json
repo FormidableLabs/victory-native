@@ -1,6 +1,6 @@
 {
   "name": "victory-native",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Shared libraries and components for Victory",
   "main": "lib/index.js",
   "files": [
@@ -18,18 +18,39 @@
   },
   "homepage": "https://github.com/FormidableLabs/victory-native#readme",
   "scripts": {
-    "start": "./node_modules/react-native/packager/packager.sh start --reset-cache --projectRoots `pwd`,`pwd`/demo"
-  },
-  "dependencies": {
-    "lodash": "^4.12.0",
-    "react": "^15.1.0",
-    "react-native-svg": "^3.1.1",
-    "victory-chart-native": "^0.2.0",
-    "victory-core": "^4.3.0",
-    "victory-core-native": "^0.2.1",
-    "victory-pie-native": "^0.2.0"
+    "start": "./node_modules/react-native/packager/packager.sh start --reset-cache --projectRoots `pwd`,`pwd`/demo",
+    "lint": "eslint test/spec/**/*.js lib/**/*.js",
+    "test": "mocha --compilers test/compiler.js --recursive test/spec/*.js"
   },
   "devDependencies": {
-    "react-native": ">=0.29.0"
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-react-native": "^1.9.0",
+    "babel-register": "^6.11.6",
+    "chai": "^3.5.0",
+    "enzyme": "^2.4.1",
+    "eslint": "^2.0.0",
+    "eslint-config-defaults": "^10.0.0-1",
+    "eslint-plugin-filenames": "^0.2.0",
+    "eslint-plugin-react": "^3.12.0",
+    "lodash.random": "^3.2.0",
+    "lodash.range": "^3.2.0",
+    "mocha": "^3.0.1",
+    "react-addons-test-utils": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-native": "~0.31.0",
+    "react-native-mock": "^0.2.5",
+    "react-native-svg": "^4.1.0",
+    "react-native-svg-mock": "^1.0.2"
+  },
+  "peerDependencies": {
+    "react-native-svg": "^4.1.0"
+  },
+  "dependencies": {
+    "react": "^15.3.0",
+    "victory-chart-native": "^1.0.0",
+    "victory-core": "~5.1.2",
+    "victory-core-native": "^1.0.0",
+    "victory-pie-native": "^1.0.0"
   }
 }
