@@ -1,0 +1,7 @@
+---
+"extends":
+  - "eslint-config-defaults/configurations/walmart/es6-react"
+
+"rules":
+  "react/jsx-pascal-case": 0
+  "no-arrow-condition": 0
