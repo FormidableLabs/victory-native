@@ -38,13 +38,13 @@
     "mocha": "^3.0.1",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-native": "~0.31.0",
+    "react-native": "~0.33.0",
     "react-native-mock": "^0.2.5",
-    "react-native-svg": "^4.1.0",
+    "react-native-svg": "^4.3.0",
     "react-native-svg-mock": "^1.0.2"
   },
   "peerDependencies": {
-    "react-native-svg": "^4.1.0"
+    "react-native-svg": "^4.3.0"
   },
   "dependencies": {
     "react": "^15.3.0",
