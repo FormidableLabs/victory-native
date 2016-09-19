@@ -1,5 +1,12 @@
 # VictoryNative Changelog
 
+## 0.3.0 (2016-09-18)
+
+- Adds support for VictoryTooltip
+- Adds support for VictoryVoronoi 
+- Adds support for VictoryVoronoiTooltip
+- Portal pattern for tooltips is *not* supported in this release
+
 ## 0.2.0 (2016-08-22)
 
 - **Moves `react-native-svg` to `peerDependencies`**
