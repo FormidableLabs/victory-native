@@ -17,13 +17,4 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "Demo";
     }
-
-    /**
-     * Returns whether dev mode should be enabled.
-     * This enables e.g. the dev menu.
-     */
-    @Override
-    protected boolean getUseDeveloperSupport() {
-        return BuildConfig.DEBUG;
-    }
 }
