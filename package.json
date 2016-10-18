@@ -1,6 +1,6 @@
 {
   "name": "victory-native",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Shared libraries and components for Victory",
   "main": "lib/index.js",
   "files": [
@@ -38,7 +38,7 @@
     "mocha": "^3.0.1",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-native": "~0.33.0",
+    "react-native": "~0.35.0",
     "react-native-mock": "^0.2.5",
     "react-native-svg": "^4.3.0",
     "react-native-svg-mock": "^1.0.2"
@@ -48,9 +48,9 @@
   },
   "dependencies": {
     "react": "^15.3.0",
-    "victory-chart-native": "^1.1.0",
-    "victory-core": "~7.0.2",
-    "victory-core-native": "^2.1.0",
-    "victory-pie-native": "^1.0.0"
+    "victory-chart-native": "^1.2.0",
+    "victory-core": "^9.0.2",
+    "victory-core-native": "^3.0.0",
+    "victory-pie-native": "^1.1.0"
   }
 }

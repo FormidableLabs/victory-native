@@ -1,5 +1,10 @@
 # VictoryNative Changelog
 
+## 0.4.0 (2016-10-18)
+
+- Adds support for VictoryPortal
+- Exports primitive components directly from Victory
+
 ## 0.3.0 (2016-09-18)
 
 - Adds support for VictoryTooltip
