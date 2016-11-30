@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.5.0 (2016-11-29)
+
+- Adds support for VictoryZoom
+
 ## 0.4.0 (2016-10-18)
 
 - Adds support for VictoryPortal
@@ -8,7 +12,7 @@
 ## 0.3.0 (2016-09-18)
 
 - Adds support for VictoryTooltip
-- Adds support for VictoryVoronoi 
+- Adds support for VictoryVoronoi
 - Adds support for VictoryVoronoiTooltip
 - Portal pattern for tooltips is *not* supported in this release
 
