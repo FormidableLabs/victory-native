@@ -1,5 +1,11 @@
 # VictoryNative Changelog
 
+## 0.6.0 (2016-12-15)
+
+- Changes how transitions and animations operate for continuous data
+- Adds support for className in primitive components
+- Moves react and react-native to peerDependencies
+
 ## 0.5.0 (2016-11-29)
 
 - Adds support for VictoryZoom
