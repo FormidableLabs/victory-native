@@ -29,7 +29,7 @@ import {
   VictoryErrorBar,
   VictoryVoronoiTooltip,
   VictoryTooltip
-} from "../lib";
+} from "victory-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -782,4 +782,4 @@ class Demo extends Component {
   }
 }
 
-AppRegistry.registerComponent("Demo", () => Demo);
+AppRegistry.registerComponent('VictoryDemo', () => Demo);

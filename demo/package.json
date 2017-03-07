@@ -1,12 +1,26 @@
 {
-  "name": "Demo",
+  "name": "VictoryDemo",
   "version": "0.0.1",
+  "dependencies": {
+    "lodash.random": "^3.2.0",
+    "lodash.range": "^3.2.0",
+    "react": "~15.4.1",
+    "react-native": "0.42.0",
+    "react-native-svg": "^5.1.5",
+    "victory-native": "../."
+  },
+  "devDependencies": {
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "jest": "19.0.2",
+    "react-test-renderer": "~15.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
-  },
-  "dependencies": {
-    "react": "^15.3.0",
-    "react-native": "~0.33.0"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
   }
 }
