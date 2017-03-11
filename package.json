@@ -39,14 +39,14 @@
     "react": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-native": "~0.38.0",
+    "react-native": "~0.42.0",
     "react-native-mock": "^0.2.5",
     "react-native-svg": "^4.1.0",
     "react-native-svg-mock": "^1.0.2"
   },
   "peerDependencies": {
     "react": "^15.3.0",
-    "react-native": "~0.38.0",
+    "react-native": "~0.42.0",
     "react-native-svg": "^4.1.0"
   },
   "dependencies": {
