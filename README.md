@@ -31,12 +31,17 @@ export default App;
 ```
 
 ### Running demo
+
 ```sh
-$ npm install
-$ npm start
+$ git clone https://github.com/FormidableLabs/victory-native
+$ cd victory-native
+$ npm install # install victory-native
+$ cd demo
+$ npm install # install the demo's dependencies, like react-native
+$ react-native run-ios # or react-native run-android
 ```
 
-Then open `demo/ios/Demo.xcodeproj` and run the app. (Note: `npm start` must run _before_ you run the app).
+Note: the demo requires the [React Native CLI](https://facebook.github.io/react-native/docs/getting-started.html).
 
 ## _IMPORTANT_
 
