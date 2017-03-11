@@ -41,18 +41,18 @@
     "react-dom": "^15.3.0",
     "react-native": "~0.42.0",
     "react-native-mock": "^0.2.5",
-    "react-native-svg": "^4.1.0",
+    "react-native-svg": "^5.1.5",
     "react-native-svg-mock": "^1.0.2"
   },
   "peerDependencies": {
     "react": "^15.3.0",
     "react-native": "~0.42.0",
-    "react-native-svg": "^4.1.0"
+    "react-native-svg": "^5.1.5"
   },
   "dependencies": {
-    "victory-chart-native": "^2.0.0",
+    "victory-chart": "^14.0.4",
     "victory-core": "^10.0.3",
-    "victory-core-native": "^4.0.0",
-    "victory-pie-native": "^2.0.0"
+    "victory-pie": "^7.2.0",
+    "lodash.omit": "^4.5.0"
   }
 }
