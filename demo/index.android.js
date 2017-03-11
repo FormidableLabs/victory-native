@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import random from "lodash.random";
 import range from "lodash.range";
 import React, { Component } from "react";

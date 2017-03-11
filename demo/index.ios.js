@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import random from "lodash.random";
 import range from "lodash.range";
 import React, { Component } from "react";
@@ -113,54 +107,6 @@ class Demo extends Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.text}>{"Tooltips!"}</Text>
-        <VictoryChart
-          domain={{y: [-25, 25]}}
-        >
-          <VictoryGroup
-            data={
-              range(10).map((i) => {
-                return {
-                  x: i,
-                  y: random(-20, 20)
-                };
-              })
-            }
-          >
-            <VictoryLine/>
-            <VictoryVoronoiTooltip
-              labels={(d) => `x: ${d.x} \n y: ${d.y}`}
-            />
-          </VictoryGroup>
-        </VictoryChart>
-
-        <VictoryChart>
-          <VictoryScatter
-            labelComponent={<VictoryTooltip/>}
-            data={[
-              {
-                x: 1, y: 3, fill: "red",
-                symbol: "plus", size: 6, label: "WOW\nSTUFF"
-              },
-              {
-                x: 2, y: 5, fill: "magenta",
-                size: 9, opacity: 0.4, label: "WAT"
-              },
-              {
-                x: 3, y: 4, fill: "orange",
-                size: 5, label: "LABEL"
-              },
-              {
-                x: 4, y: 2, fill: "brown",
-                symbol: "square", size: 6, label: "OKAY"
-              },
-              {
-                x: 5, y: 5, fill: "black",
-                symbol: "triangleUp", size: 5, label: "GOOD"
-              }
-            ]}
-         />
-        </VictoryChart>
         <Text style={styles.text}>{"<VictoryLabel/>"}</Text>
         <Svg height="300" width="300">
           <VictoryLabel
@@ -777,6 +723,55 @@ class Demo extends Component {
             {x: 5, y: 1, errorX: [1, 0.5], errorY: .2}
           ]}
         />
+
+        <Text style={styles.text}>{"Tooltips"}</Text>
+        <VictoryChart
+          domain={{y: [-25, 25]}}
+        >
+          <VictoryGroup
+            data={
+              range(10).map((i) => {
+                return {
+                  x: i,
+                  y: random(-20, 20)
+                };
+              })
+            }
+          >
+            <VictoryLine/>
+            <VictoryVoronoiTooltip
+              labels={(d) => `x: ${d.x} \n y: ${d.y}`}
+            />
+          </VictoryGroup>
+        </VictoryChart>
+
+        <VictoryChart>
+          <VictoryScatter
+            labelComponent={<VictoryTooltip/>}
+            data={[
+              {
+                x: 1, y: 3, fill: "red",
+                symbol: "plus", size: 6, label: "WOW\nSTUFF"
+              },
+              {
+                x: 2, y: 5, fill: "magenta",
+                size: 9, opacity: 0.4, label: "WAT"
+              },
+              {
+                x: 3, y: 4, fill: "orange",
+                size: 5, label: "LABEL"
+              },
+              {
+                x: 4, y: 2, fill: "brown",
+                symbol: "square", size: 6, label: "OKAY"
+              },
+              {
+                x: 5, y: 5, fill: "black",
+                symbol: "triangleUp", size: 5, label: "GOOD"
+              }
+            ]}
+          />
+        </VictoryChart>
       </ScrollView>
     );
   }
