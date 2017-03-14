@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import Svg from "react-native-svg";
 import {
-  VictoryLabel,
   VictoryArea,
   VictoryAxis,
   VictoryBar,
@@ -107,31 +106,7 @@ class Demo extends Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.text}>{"<VictoryLabel/>"}</Text>
-        <Svg height="300" width="300">
-          <VictoryLabel
-            x={150}
-            y={150}
-            text="Hello"
-            textAnchor="middle"
-            style={{
-              fontSize: 25,
-              fill: "black"
-            }}
-          />
-          <VictoryLabel
-            x={150}
-            y={200}
-            text="wow"
-            angle={"45"}
-            textAnchor="middle"
-            style={{
-              fontSize: 25,
-              fill: "black"
-            }}
-          />
-        </Svg>
-
+        <Text style={styles.text}>{"<VictoryPie/>"}</Text>
         <VictoryPie
           innerRadius={75}
           data={this.state.randomData}
@@ -250,26 +225,26 @@ class Demo extends Component {
             data={[
               {
                 x: 1, y: 3, fill: "red",
-                symbol: "plus", size: 6, label: "WOW\nSTUFF"
+                symbol: "plus", size: 6, label: "Red"
               },
               {
                 x: 2, y: 5, fill: "magenta",
-                size: 9, opacity: 0.4, label: "WAT"
+                size: 9, opacity: 0.4, label: "Magenta"
               },
               {
                 x: 3, y: 4, fill: "orange",
-                size: 5, label: "LABEL"
+                size: 5, label: "Orange"
               },
               {
                 x: 4, y: 2, fill: "brown",
-                symbol: "square", size: 6, label: "OKAY"
+                symbol: "square", size: 6, label: "Brown"
               },
               {
                 x: 5, y: 5, fill: "black",
-                symbol: "triangleUp", size: 5, label: "GOOD"
+                symbol: "triangleUp", size: 5, label: "Black"
               }
             ]}
-         />
+          />
         </VictoryChart>
 
         <VictoryChart animate={{duration: 1500}}>
