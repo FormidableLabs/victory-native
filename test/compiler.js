@@ -1,3 +1,4 @@
+
 var fs = require("fs");
 var babel = require("babel-core");
 var origJs = require.extensions[".js"];
@@ -19,11 +20,8 @@ var compile = function (fileName) {
 var shouldCompile = function (fileName) {
   var should = [
     "node_modules/victory-chart",
-    "node_modules/victory-chart-native",
     "node_modules/victory-core",
-    "node_modules/victory-core-native",
-    "node_modules/victory-pie",
-    "node_modules/victory-pie-native",
+    "node_modules/victory-pie"
   ].some(function (mod) {
     return fileName.indexOf(mod) >= 0;
   });
