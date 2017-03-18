@@ -22,7 +22,7 @@ import {
   VictoryErrorBar,
   VictoryVoronoiTooltip,
   VictoryTooltip
-} from "victory-native";
+} from "../lib";
 
 const styles = StyleSheet.create({
   container: {
