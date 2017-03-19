@@ -1,5 +1,10 @@
 # VictoryNative Changelog
 
+## 0.7.0 (2017-03-19)
+
+- Upgrades to `react-native@~0.42.0` and `react-native-svg@^5.1.5`
+- Fixes broken demos
+
 ## 0.6.0 (2016-12-15)
 
 - Changes how transitions and animations operate for continuous data
