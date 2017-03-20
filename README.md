@@ -30,21 +30,18 @@ class App extends Component {
 export default App;
 ```
 
-### Demo
+### Running demo
 
 ```sh
 $ git clone https://github.com/FormidableLabs/victory-native
 $ cd victory-native
 $ npm install # install victory-native
-$ npm start # runs both the packager and the simulator.
+$ cd demo
+$ npm install # install the demo's dependencies, like react-native
+$ react-native run-ios # or react-native run-android
 ```
 
-Notes:
-- The demo requires the [React Native CLI](https://facebook.github.io/react-native/docs/getting-started.html).
-- A "Build Failed" message from react-native may be displayed when running `npm start`; don't despair, it should still work.
-- The demo is both for illustration and for victory-native library development.
-Because of this, you can _not_ use the `victory-native` command directly on the demo.
-
+Note: the demo requires the [React Native CLI](https://facebook.github.io/react-native/docs/getting-started.html).
 
 ## _IMPORTANT_
 
