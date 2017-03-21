@@ -2,12 +2,12 @@
   "name": "VictoryDemo",
   "version": "0.0.1",
   "dependencies": {
+    "babel-plugin-module-resolver": "^2.5.0",
     "lodash.random": "^3.2.0",
     "lodash.range": "^3.2.0",
     "react": "~15.4.1",
     "react-native": "0.42.0",
-    "react-native-svg": "^5.1.5",
-    "victory-native": "../"
+    "react-native-svg": "^5.1.5"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
