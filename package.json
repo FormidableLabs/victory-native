@@ -19,6 +19,7 @@
   "homepage": "https://github.com/FormidableLabs/victory-native#readme",
   "scripts": {
     "start": "./node_modules/react-native/packager/packager.sh start --reset-cache --projectRoots `pwd`,`pwd`/demo",
+    "demo:ios": "react-native run-ios --project-path demo/ios",
     "lint": "eslint test/spec/**/*.js lib/**/*.js",
     "test": "mocha --compilers test/compiler.js --recursive test/spec/*.js"
   },

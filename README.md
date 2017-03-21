@@ -38,10 +38,9 @@ the demo requires the [React Native CLI](https://facebook.github.io/react-native
 $ npm install -g react-native-cli # install victory-native if you haven't already
 $ git clone https://github.com/FormidableLabs/victory-native
 $ cd victory-native
-$ npm install # install victory-native
-$ cd demo
-$ npm install # install the demo's dependencies, like react-native
-$ react-native run-ios # or react-native run-android
+$ npm install   # install victory-native
+$ npm start     # start react-native packager manually before launching demo!
+$ npm demo:ios  # or react-native run-android
 ```
 
 ## _IMPORTANT_
