@@ -43,6 +43,9 @@ $ npm start     # start react-native packager manually before launching demo!
 $ npm demo:ios  # or react-native run-android
 ```
 
+Do **not** run `npm install` in the `demo/` directory, or the packager packager will crash due to
+"duplicate @providesModule declarations" found in `node_modules/` and `demo/node_modules`.
+
 ## _IMPORTANT_
 
 This project is in a pre-release state. We're hard at work fixing bugs and improving the API. Be prepared for breaking changes!
