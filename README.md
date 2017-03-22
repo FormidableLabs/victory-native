@@ -35,14 +35,21 @@ export default App;
 the demo requires the [React Native CLI](https://facebook.github.io/react-native/docs/getting-started.html).
 
 ```sh
-$ npm install -g react-native-cli # install victory-native if you haven't already
+# Install
+$ npm install -g react-native-cli # if you haven't already
 $ git clone https://github.com/FormidableLabs/victory-native
 $ cd victory-native
-$ npm install # install victory-native
-$ cd demo
-$ npm install # install the demo's dependencies, like react-native
-$ react-native run-ios # or react-native run-android
+$ npm install
+
+# Start the react-native packager in a terminal that will remain running
+$ npm start
+
+# Run the demo from a new terminal window
+$ npm run demo:ios  # or react-native run-android
 ```
+
+Do **not** run `npm install` in the `demo/` directory, or the packager packager will crash due to
+"duplicate @providesModule declarations" found in `node_modules/` and `demo/node_modules`.
 
 ## _IMPORTANT_
 
