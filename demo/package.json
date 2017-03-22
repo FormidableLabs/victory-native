@@ -6,7 +6,8 @@
     "lodash.range": "^3.2.0",
     "react": "~15.4.1",
     "react-native": "0.42.0",
-    "react-native-svg": "^5.1.5"
+    "react-native-svg": "^5.1.5",
+    "victory-native": "*"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
