@@ -35,12 +35,12 @@ export default App;
 the demo requires the [React Native CLI](https://facebook.github.io/react-native/docs/getting-started.html).
 
 ```sh
-$ npm install -g react-native-cli # install victory-native if you haven't already
+$ npm install -g react-native-cli # if you haven't already
 $ git clone https://github.com/FormidableLabs/victory-native
 $ cd victory-native
 $ npm install   # install victory-native
 $ npm start     # start react-native packager manually before launching demo!
-$ npm demo:ios  # or react-native run-android
+$ npm run demo:ios  # or react-native run-android
 ```
 
 Do **not** run `npm install` in the `demo/` directory, or the packager packager will crash due to
