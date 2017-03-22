@@ -26,6 +26,7 @@
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
+    "babel-plugin-module-resolver": "^2.5.0",
     "babel-preset-react-native": "^1.9.0",
     "babel-register": "^6.11.6",
     "chai": "^3.5.0",

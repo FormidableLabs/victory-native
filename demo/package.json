@@ -2,7 +2,6 @@
   "name": "VictoryDemo",
   "version": "0.0.1",
   "dependencies": {
-    "babel-plugin-module-resolver": "^2.5.0",
     "lodash.random": "^3.2.0",
     "lodash.range": "^3.2.0",
     "react": "~15.4.1",
