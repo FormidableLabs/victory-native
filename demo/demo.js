@@ -6,6 +6,7 @@ import React, { Component } from "react";
 import {
   ScrollView,
   StyleSheet,
+  Platform,
   Text
 } from "react-native";
 import Svg from "react-native-svg";
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
-    fontFamily: "Menlo",
+    fontFamily: (Platform.OS === "ios") ? "Menlo" : "monospace",
     fontWeight: "bold",
     marginTop: 10,
     marginBottom: 30
