@@ -63,7 +63,8 @@ export default class Demo extends Component {
       y: this.getYFunction(),
       style: this.getStyles(),
       transitionData: this.getTransitionData(),
-      randomData: this.generateRandomData()
+      randomData: this.generateRandomData(),
+      data: this.getData()
     };
   }
   getYFunction() {
@@ -73,6 +74,10 @@ export default class Demo extends Component {
 
   generateRandomData() {
     return range(1, 7).map(() => ({x: " ", y: random(1, 10)}));
+  }
+
+  getData() {
+    return range(1, 10).map((i) => ({x: i, y: random(1, 10)}));
   }
 
   getStyles() {
@@ -102,13 +107,15 @@ export default class Demo extends Component {
         y: this.getYFunction(),
         style: this.getStyles(),
         transitionData: this.getTransitionData(),
-        randomData: this.generateRandomData()
+        randomData: this.generateRandomData(),
+        data: this.getData()
       });
     }, 3000);
   }
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
+        {/*}
          <VictoryPie
           innerRadius={75}
           data={this.state.randomData}
@@ -227,8 +234,20 @@ export default class Demo extends Component {
             ]}
           />
         </VictoryChart>
-
-        <VictoryChart>
+        {*/}
+        <VictoryChart animate={{duration: 2000}}>
+          <VictoryScatter
+            labels={(d) => d.y}
+            data={this.state.data}
+            style={{
+              data: {
+                fill: "tomato", width: 12
+              }
+            }}
+          />
+        </VictoryChart>
+        {/*}
+        <VictoryChart animate={{duration: 2000}}>
           <VictoryBar
             data={this.state.transitionData}
             style={{
@@ -728,6 +747,7 @@ export default class Demo extends Component {
             ]}
           />
         </VictoryChart>
+        {*/}
       </ScrollView>
     );
   }
