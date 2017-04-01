@@ -5,3 +5,4 @@
 "rules":
   "react/jsx-pascal-case": 0
   "no-arrow-condition": 0
+  "no-magic-numbers": 0

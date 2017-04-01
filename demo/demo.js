@@ -73,7 +73,7 @@ export default class Demo extends Component {
   }
 
   generateRandomData() {
-    return range(1, 7).map(() => ({x: " ", y: random(1, 10)}));
+    return range(1, 7).map((i) => ({x: i, y: random(1, 10)}));
   }
 
   getData() {
@@ -115,21 +115,14 @@ export default class Demo extends Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        {/*}
          <VictoryPie
           innerRadius={75}
+          labelRadius={125}
+          style={{ labels: { fontSize: 20 }}}
           data={this.state.randomData}
           animate={{duration: 1500}}
         />
 
-        <VictoryPie
-          style={{
-            labels: {
-              fontSize: 15,
-              padding: 75
-            }
-          }}
-        />
         <VictoryPie
           style={{
             data: {
@@ -150,11 +143,33 @@ export default class Demo extends Component {
           startAngle={-90}
         />
         <VictoryPie
+          style={{
+            labels: {
+              fill: "white",
+              stroke: "none",
+              fontSize: 15,
+              fontWeight: "bold"
+            }
+          }}
           data={[
-            {x: "Cat", y: 6},
-            {x: "Dog", y: 9},
-            {x: "Fish", y: 5},
-            {x: "Bird", y: 5}
+            {x: "<5", y: 6279},
+            {x: "5-13", y: 9182},
+            {x: "14-17", y: 5511},
+            {x: "18-24", y: 7164},
+            {x: "25-44", y: 6716},
+            {x: "45-64", y: 4263},
+            {x: "≥65", y: 7502}
+          ]}
+          innerRadius={70}
+          labelRadius={100}
+          colorScale={[
+            "#D85F49",
+            "#F66D3B",
+            "#D92E1D",
+            "#D73C4C",
+            "#FFAF59",
+            "#E28300",
+            "#F6A57F"
           ]}
         />
         <VictoryPie
@@ -234,21 +249,9 @@ export default class Demo extends Component {
             ]}
           />
         </VictoryChart>
-        {*/}
-        <VictoryChart animate={{duration: 2000}}>
-          <VictoryScatter
-            labels={(d) => d.y}
-            data={this.state.data}
-            style={{
-              data: {
-                fill: "tomato", width: 12
-              }
-            }}
-          />
-        </VictoryChart>
-        {/*}
         <VictoryChart animate={{duration: 2000}}>
           <VictoryBar
+            labels={() => "Hi"}
             data={this.state.transitionData}
             style={{
               data: {
@@ -747,7 +750,6 @@ export default class Demo extends Component {
             ]}
           />
         </VictoryChart>
-        {*/}
       </ScrollView>
     );
   }
