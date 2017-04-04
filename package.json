@@ -52,9 +52,9 @@
     "react-native-svg": "^5.1.5"
   },
   "dependencies": {
-    "victory-chart": "git+https://github.com/formidablelabs/victory-chart#native",
-    "victory-core": "git+https://github.com/formidablelabs/victory-core#native",
-    "victory-pie": "git+https://github.com/formidablelabs/victory-pie#native",
+    "victory-chart": "^18.2.0",
+    "victory-core": "^14.1.0",
+    "victory-pie": "^10.3.0",
     "lodash.omit": "^4.5.0"
   }
 }
