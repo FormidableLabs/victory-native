@@ -11,19 +11,21 @@ import {
 } from "react-native";
 import Svg from "react-native-svg";
 import {
-  VictoryArea,
+  VictoryLabel,
+  VictoryVoronoiTooltip,
   VictoryAxis,
-  VictoryBar,
-  VictoryCandlestick,
   VictoryChart,
   VictoryGroup,
-  VictoryLine,
-  VictoryPie,
-  VictoryScatter,
   VictoryStack,
+  VictoryCandlestick,
   VictoryErrorBar,
-  VictoryVoronoiTooltip,
-  VictoryTooltip
+  VictoryBar,
+  VictoryLine,
+  VictoryArea,
+  VictoryScatter,
+  VictoryTooltip,
+  Flyout,
+  VictoryPie
 } from "victory-native";
 
 const styles = StyleSheet.create({
@@ -62,7 +64,8 @@ export default class Demo extends Component {
       y: this.getYFunction(),
       style: this.getStyles(),
       transitionData: this.getTransitionData(),
-      randomData: this.generateRandomData()
+      randomData: this.generateRandomData(),
+      data: this.getData()
     };
   }
   getYFunction() {
@@ -71,7 +74,11 @@ export default class Demo extends Component {
   }
 
   generateRandomData() {
-    return range(1, 7).map(() => ({x: " ", y: random(1, 10)}));
+    return range(1, 7).map((i) => ({x: i, y: random(1, 10)}));
+  }
+
+  getData() {
+    return range(1, 10).map((i) => ({x: i, y: random(1, 10)}));
   }
 
   getStyles() {
@@ -101,28 +108,22 @@ export default class Demo extends Component {
         y: this.getYFunction(),
         style: this.getStyles(),
         transitionData: this.getTransitionData(),
-        randomData: this.generateRandomData()
+        randomData: this.generateRandomData(),
+        data: this.getData()
       });
     }, 3000);
   }
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.text}>{"<VictoryPie/>"}</Text>
-        <VictoryPie
+         <VictoryPie
           innerRadius={75}
+          labelRadius={125}
+          style={{ labels: { fontSize: 20 }}}
           data={this.state.randomData}
           animate={{duration: 1500}}
         />
 
-        <VictoryPie
-          style={{
-            labels: {
-              fontSize: 15,
-              padding: 75
-            }
-          }}
-        />
         <VictoryPie
           style={{
             data: {
@@ -147,7 +148,7 @@ export default class Demo extends Component {
             labels: {
               fill: "white",
               stroke: "none",
-              fontSize: 10,
+              fontSize: 15,
               fontWeight: "bold"
             }
           }}
@@ -161,6 +162,7 @@ export default class Demo extends Component {
             {x: "≥65", y: 7502}
           ]}
           innerRadius={70}
+          labelRadius={100}
           colorScale={[
             "#D85F49",
             "#F66D3B",
@@ -248,9 +250,9 @@ export default class Demo extends Component {
             ]}
           />
         </VictoryChart>
-
-        <VictoryChart animate={{duration: 1500}}>
+        <VictoryChart animate={{duration: 2000}}>
           <VictoryBar
+            labels={() => "Hi"}
             data={this.state.transitionData}
             style={{
               data: {

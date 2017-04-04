@@ -3,7 +3,7 @@
   "plugins": [
       ["module-resolver", {
         "alias": {
-          "victory-native": "./lib",
+          "victory-native": "./lib"
         }
       }]
     ]
