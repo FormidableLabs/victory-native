@@ -116,6 +116,7 @@ export default class Demo extends Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
+         <Text style={styles.text}>{"<VictoryPie/>"}</Text>
          <VictoryPie
           innerRadius={75}
           labelRadius={125}
