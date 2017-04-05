@@ -421,6 +421,12 @@ export default class Demo extends Component {
           y={(data) => (data.yield + data.error)}
         />
 
+        <VictoryArea
+          interpolation="basis"
+          animate={{duration: 1500}}
+          data={this.state.data}
+        />
+
         <VictoryGroup
           width={300}
           height={375}
