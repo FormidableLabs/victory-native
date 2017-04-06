@@ -116,6 +116,7 @@ export default class Demo extends Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
+         <Text style={styles.text}>{"<VictoryPie/>"}</Text>
          <VictoryPie
           innerRadius={75}
           labelRadius={125}
@@ -418,6 +419,12 @@ export default class Demo extends Component {
           ]}
           x={"amount"}
           y={(data) => (data.yield + data.error)}
+        />
+
+        <VictoryArea
+          interpolation="basis"
+          animate={{duration: 1500}}
+          data={this.state.data}
         />
 
         <VictoryGroup
