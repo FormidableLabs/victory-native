@@ -1,5 +1,15 @@
 # VictoryNative Changelog
 
+## 0.7.2 (2017-04-06)
+
+- Fixes VictoryLine and VictoryArea animations
+
+## 0.7.1 (2017-04-04)
+
+- Upgrades Victory dependencies
+- Fixes demos and hot reloading
+- Removes OS-specific font
+
 ## 0.7.0 (2017-03-19)
 
 - Upgrades to `react-native@~0.42.0` and `react-native-svg@^5.1.5`
