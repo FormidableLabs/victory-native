@@ -26,6 +26,7 @@ import {
   VictoryContainer,
   VictoryZoomContainer,
   VictoryVoronoiContainer,
+  VictorySelectionContainer,
   VictoryPie
 } from "victory-native";
 
@@ -131,14 +132,16 @@ export default class Demo extends Component {
 
         <VictoryChart
           containerComponent={
-            <VictoryVoronoiContainer
+            <VictorySelectionContainer
               onTouchStart={() => this.changeScroll(false)}
               onTouchEnd={() => this.changeScroll(true)}
-              labels={(d) => `( ${d.x} , ${d.y} )`}
             />
           }
         >
-         <VictoryLine data={this.state.staticRandomData} />
+          <VictoryScatter
+            data={this.state.staticRandomData}
+            style={{ data: {fill: (d, active) => active ? "tomato" : "gray"}}}
+          />
         </VictoryChart>
 
         <VictoryChart
@@ -151,6 +154,18 @@ export default class Demo extends Component {
           }
         >
          <VictoryBar/>
+        </VictoryChart>
+
+        <VictoryChart
+          containerComponent={
+            <VictoryVoronoiContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              labels={(d) => `( ${d.x} , ${d.y} )`}
+            />
+          }
+        >
+         <VictoryLine data={this.state.staticRandomData} />
         </VictoryChart>
 
         <VictoryChart
