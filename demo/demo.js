@@ -25,6 +25,7 @@ import {
   VictoryTooltip,
   VictoryContainer,
   VictoryZoomContainer,
+  VictoryVoronoiContainer,
   VictoryPie
 } from "victory-native";
 
@@ -66,6 +67,7 @@ export default class Demo extends Component {
       style: this.getStyles(),
       transitionData: this.getTransitionData(),
       randomData: this.generateRandomData(),
+      staticRandomData: this.generateRandomData(15),
       data: this.getData()
     };
   }
@@ -74,8 +76,8 @@ export default class Demo extends Component {
     return (data) => Math.exp(-n * data.x) * Math.sin(2 * n * Math.PI * data.x);
   }
 
-  generateRandomData() {
-    return range(1, 7).map((i) => ({x: i, y: random(1, 10)}));
+  generateRandomData(points=6) {
+    return range(1, points + 1).map((i) => ({x: i, y: i + random(-1, 2)}));
   }
 
   getData() {
@@ -126,6 +128,18 @@ export default class Demo extends Component {
         <Text style={styles.text}>{"Demo\n"}</Text>
 
         <Text style={styles.text}>{"Containers"}</Text>
+
+        <VictoryChart
+          containerComponent={
+            <VictoryVoronoiContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              labels={(d) => `( ${d.x} , ${d.y} )`}
+            />
+          }
+        >
+         <VictoryLine data={this.state.staticRandomData} />
+        </VictoryChart>
 
         <VictoryChart
           containerComponent={
