@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import Svg from "react-native-svg";
 import {
-  VictoryLabel,
   VictoryVoronoiTooltip,
   VictoryAxis,
   VictoryChart,
@@ -24,7 +23,8 @@ import {
   VictoryArea,
   VictoryScatter,
   VictoryTooltip,
-  Flyout,
+  VictoryContainer,
+  VictoryZoomContainer,
   VictoryPie
 } from "victory-native";
 
@@ -61,6 +61,7 @@ export default class Demo extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      scrollEnabled: true,
       y: this.getYFunction(),
       style: this.getStyles(),
       transitionData: this.getTransitionData(),
@@ -102,6 +103,10 @@ export default class Demo extends Component {
     });
   }
 
+  changeScroll(scrollEnabled) {
+    this.setState({scrollEnabled});
+  }
+
   componentDidMount() {
     setInterval(() => {
       this.setState({
@@ -115,9 +120,39 @@ export default class Demo extends Component {
   }
   render() {
     return (
-      <ScrollView contentContainerStyle={styles.container}>
-         <Text style={styles.text}>{"<VictoryPie/>"}</Text>
-         <VictoryPie
+      <ScrollView contentContainerStyle={styles.container} scrollEnabled={this.state.scrollEnabled}>
+        <Text style={styles.text}>{"Victory"}</Text>
+        <Text style={styles.text}>{"Native"}</Text>
+        <Text style={styles.text}>{"Demo\n"}</Text>
+
+        <Text style={styles.text}>{"Containers"}</Text>
+
+        <VictoryChart
+          containerComponent={
+            <VictoryZoomContainer
+              dimension={"x"}
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+            />
+          }
+        >
+         <VictoryBar/>
+        </VictoryChart>
+
+        <VictoryChart
+          containerComponent={
+            <VictoryContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+            />
+          }
+        >
+         <VictoryBar/>
+        </VictoryChart>
+
+        <Text style={styles.text}>{"<VictoryPie/>"}</Text>
+
+        <VictoryPie
           innerRadius={75}
           labelRadius={125}
           style={{ labels: { fontSize: 20 }}}
