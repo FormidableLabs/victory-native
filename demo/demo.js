@@ -27,6 +27,7 @@ import {
   VictoryZoomContainer,
   VictoryVoronoiContainer,
   VictorySelectionContainer,
+  VictoryBrushContainer,
   VictoryPie
 } from "victory-native";
 
@@ -129,6 +130,18 @@ export default class Demo extends Component {
         <Text style={styles.text}>{"Demo\n"}</Text>
 
         <Text style={styles.text}>{"Containers"}</Text>
+
+        <VictoryChart
+          containerComponent={
+            <VictoryBrushContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              selectionStyle={{fill: "blue", fillOpacity: 0.1}}
+            />
+          }
+        >
+         <VictoryBar/>
+        </VictoryChart>
 
         <VictoryChart
           containerComponent={
