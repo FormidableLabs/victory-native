@@ -2,8 +2,7 @@
   "name": "VictoryDemo",
   "version": "0.0.1",
   "dependencies": {
-    "lodash.random": "^3.2.0",
-    "lodash.range": "^3.2.0",
+    "lodash": "^4.17.4",
     "react": "~15.4.1",
     "react-native": "0.42.0",
     "react-native-svg": "^5.1.5",

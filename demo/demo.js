@@ -1,8 +1,7 @@
 /*global setInterval*/
 /* demo.js is loaded by both index.ios.js and index.android.js */
 
-import random from "lodash.random";
-import range from "lodash.range";
+import { random, range } from "lodash";
 import React, { Component } from "react";
 import {
   ScrollView,
