@@ -24,12 +24,12 @@ import {
   VictoryArea,
   VictoryScatter,
   VictoryTooltip,
-  VictoryContainer,
   VictoryZoomContainer,
   VictoryVoronoiContainer,
   VictorySelectionContainer,
   VictoryBrushContainer,
-  VictoryPie
+  VictoryPie,
+  createContainer
 } from "victory-native";
 
 const styles = StyleSheet.create({
@@ -60,6 +60,8 @@ const candleData = [
   {x: 7, open: 30, close: 90, high: 95, low: 30},
   {x: 8, open: 80, close: 81, high: 83, low: 75}
 ];
+
+const VictoryZoomVoronoiContainer = createContainer("zoom", "voronoi");
 
 export default class Demo extends Component {
   constructor(props) {
@@ -132,8 +134,7 @@ export default class Demo extends Component {
         <Text style={styles.text}>{"Native"}</Text>
         <Text style={styles.text}>{"Demo\n"}</Text>
 
-        <Text style={styles.text}>{"Containers"}</Text>
-
+        <Text style={styles.text}>{"VictoryBrushContainer"}</Text>
         <VictoryChart
           containerComponent={
             <VictoryBrushContainer
@@ -146,6 +147,7 @@ export default class Demo extends Component {
          <VictoryBar/>
         </VictoryChart>
 
+        <Text style={styles.text}>{"VictorySelectionContainer"}</Text>
         <VictoryChart
           containerComponent={
             <VictorySelectionContainer
@@ -160,6 +162,7 @@ export default class Demo extends Component {
           />
         </VictoryChart>
 
+        <Text style={styles.text}>{"VictoryZoomContainer"}</Text>
         <VictoryChart
           containerComponent={
             <VictoryZoomContainer
@@ -172,6 +175,7 @@ export default class Demo extends Component {
          <VictoryBar/>
         </VictoryChart>
 
+        <Text style={styles.text}>{"VictoryVoronoiContainer"}</Text>
         <VictoryChart
           containerComponent={
             <VictoryVoronoiContainer
@@ -184,15 +188,19 @@ export default class Demo extends Component {
          <VictoryLine data={this.state.staticRandomData} />
         </VictoryChart>
 
+        <Text style={styles.text}>{'createContainer("zoom", "voronoi")'}</Text>
+
         <VictoryChart
           containerComponent={
-            <VictoryContainer
+            <VictoryZoomVoronoiContainer
               onTouchStart={() => this.changeScroll(false)}
               onTouchEnd={() => this.changeScroll(true)}
+              labels={(d) => `( ${d.x} , ${d.y} )`}
+              dimension={"x"}
             />
           }
         >
-         <VictoryBar/>
+         <VictoryScatter data={this.state.staticRandomData} />
         </VictoryChart>
 
         <Text style={styles.text}>{"<VictoryPie/>"}</Text>
