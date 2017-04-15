@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "victory-chart": "^18.2.0",
+    "victory-chart": "git://github.com/FormidableLabs/victory-chart.git#native-dedup",
     "victory-core": "git://github.com/FormidableLabs/victory-core.git#native-dedup",
     "victory-pie": "^10.3.0"
   }
