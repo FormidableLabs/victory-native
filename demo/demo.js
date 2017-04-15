@@ -1,7 +1,7 @@
+/*global setInterval*/
 /* demo.js is loaded by both index.ios.js and index.android.js */
 
-import random from "lodash.random";
-import range from "lodash.range";
+import { random, range } from "lodash";
 import React, { Component } from "react";
 import {
   ScrollView,
@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import Svg from "react-native-svg";
 import {
-  VictoryLabel,
   VictoryVoronoiTooltip,
   VictoryAxis,
   VictoryChart,
@@ -24,8 +23,12 @@ import {
   VictoryArea,
   VictoryScatter,
   VictoryTooltip,
-  Flyout,
-  VictoryPie
+  VictoryZoomContainer,
+  VictoryVoronoiContainer,
+  VictorySelectionContainer,
+  VictoryBrushContainer,
+  VictoryPie,
+  createContainer
 } from "victory-native";
 
 const styles = StyleSheet.create({
@@ -57,14 +60,18 @@ const candleData = [
   {x: 8, open: 80, close: 81, high: 83, low: 75}
 ];
 
+const VictoryZoomVoronoiContainer = createContainer("zoom", "voronoi");
+
 export default class Demo extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      scrollEnabled: true,
       y: this.getYFunction(),
       style: this.getStyles(),
       transitionData: this.getTransitionData(),
       randomData: this.generateRandomData(),
+      staticRandomData: this.generateRandomData(15),
       data: this.getData()
     };
   }
@@ -73,8 +80,8 @@ export default class Demo extends Component {
     return (data) => Math.exp(-n * data.x) * Math.sin(2 * n * Math.PI * data.x);
   }
 
-  generateRandomData() {
-    return range(1, 7).map((i) => ({x: i, y: random(1, 10)}));
+  generateRandomData(points = 6) {
+    return range(1, points + 1).map((i) => ({x: i, y: i + random(-1, 2)}));
   }
 
   getData() {
@@ -93,7 +100,7 @@ export default class Demo extends Component {
   }
 
   getTransitionData() {
-    const n = random(4, 10)
+    const n = random(4, 10);
     return range(n).map((i) => {
       return {
         x: i,
@@ -102,22 +109,102 @@ export default class Demo extends Component {
     });
   }
 
+  changeScroll(scrollEnabled) {
+    this.setState({scrollEnabled});
+  }
+
+  updateDemoData() {
+    this.setState({
+      y: this.getYFunction(),
+      style: this.getStyles(),
+      transitionData: this.getTransitionData(),
+      randomData: this.generateRandomData(),
+      data: this.getData()
+    });
+  }
+
   componentDidMount() {
-    setInterval(() => {
-      this.setState({
-        y: this.getYFunction(),
-        style: this.getStyles(),
-        transitionData: this.getTransitionData(),
-        randomData: this.generateRandomData(),
-        data: this.getData()
-      });
-    }, 3000);
+    setInterval(this.updateDemoData.bind(this), 3000);
   }
   render() {
     return (
-      <ScrollView contentContainerStyle={styles.container}>
-         <Text style={styles.text}>{"<VictoryPie/>"}</Text>
-         <VictoryPie
+      <ScrollView contentContainerStyle={styles.container} scrollEnabled={this.state.scrollEnabled}>
+        <Text style={styles.text}>{"Victory"}</Text>
+        <Text style={styles.text}>{"Native"}</Text>
+        <Text style={styles.text}>{"Demo\n"}</Text>
+
+        <Text style={styles.text}>{"VictoryBrushContainer"}</Text>
+        <VictoryChart
+          containerComponent={
+            <VictoryBrushContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              selectionStyle={{fill: "blue", fillOpacity: 0.1}}
+            />
+          }
+        >
+         <VictoryBar/>
+        </VictoryChart>
+
+        <Text style={styles.text}>{"VictorySelectionContainer"}</Text>
+        <VictoryChart
+          containerComponent={
+            <VictorySelectionContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+            />
+          }
+        >
+          <VictoryScatter
+            data={this.state.staticRandomData}
+            style={{ data: {fill: (d, active) => active ? "tomato" : "gray"}}}
+          />
+        </VictoryChart>
+
+        <Text style={styles.text}>{"VictoryZoomContainer"}</Text>
+        <VictoryChart
+          containerComponent={
+            <VictoryZoomContainer
+              dimension={"x"}
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+            />
+          }
+        >
+         <VictoryBar/>
+        </VictoryChart>
+
+        <Text style={styles.text}>{"VictoryVoronoiContainer"}</Text>
+        <VictoryChart
+          containerComponent={
+            <VictoryVoronoiContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              labels={(d) => `( ${d.x} , ${d.y} )`}
+            />
+          }
+        >
+         <VictoryLine data={this.state.staticRandomData} />
+        </VictoryChart>
+
+        <Text style={styles.text}>{'createContainer("zoom", "voronoi")'}</Text>
+
+        <VictoryChart
+          containerComponent={
+            <VictoryZoomVoronoiContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              labels={(d) => `( ${d.x} , ${d.y} )`}
+              dimension={"x"}
+            />
+          }
+        >
+         <VictoryScatter data={this.state.staticRandomData} />
+        </VictoryChart>
+
+        <Text style={styles.text}>{"<VictoryPie/>"}</Text>
+
+        <VictoryPie
           innerRadius={75}
           labelRadius={125}
           style={{ labels: { fontSize: 20 }}}
@@ -676,16 +763,18 @@ export default class Demo extends Component {
             width={320}
             height={320}
             domain={[-10, 10]}
-            crossAxis={true}
+            crossAxis
             offsetY={160}
-            standalone={false}/>
+            standalone={false}
+          />
           <VictoryAxis dependentAxis
             width={320}
             height={320}
             domain={[-10, 10]}
-            crossAxis={true}
+            crossAxis
             offsetX={160}
-            standalone={false}/>
+            standalone={false}
+          />
         </Svg>
 
         <VictoryAxis
