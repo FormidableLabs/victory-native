@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.8.0 (2017-04-20)
+
+- Adds VictoryVoronoiContainer, VictorySelectionContainer, VictoryZoomContainer, VictoryBrushContainer
+
 ## 0.7.2 (2017-04-06)
 
 - Fixes VictoryLine and VictoryArea animations
