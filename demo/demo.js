@@ -165,7 +165,6 @@ export default class Demo extends Component {
         <VictoryChart
           containerComponent={
             <VictoryZoomContainer
-              dimension={"x"}
               onTouchStart={() => this.changeScroll(false)}
               onTouchEnd={() => this.changeScroll(true)}
             />
