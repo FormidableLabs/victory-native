@@ -1,8 +1,10 @@
 ---
 "extends":
-  - "eslint-config-defaults/configurations/walmart/es6-react"
+  - "formidable/configurations/es6-react"
 
 "rules":
   "react/jsx-pascal-case": 0
-  "no-arrow-condition": 0
   "no-magic-numbers": 0
+  # Don't check victory deps until bugfix for NODE_PATH uptream.
+  # https://github.com/benmosher/eslint-plugin-import/issues/142
+  "import/no-unresolved": [2, { ignore: ["^(builder-|)victory"] }]
