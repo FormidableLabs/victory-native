@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.8.1 (2017-05-05)
+
+- Fixes synthetic event reuse error in VictoryZoomContainer
+
 ## 0.8.0 (2017-04-20)
 
 - Adds VictoryVoronoiContainer, VictorySelectionContainer, VictoryZoomContainer, VictoryBrushContainer
