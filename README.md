@@ -1,9 +1,8 @@
 [![Stories in Ready](https://badge.waffle.io/FormidableLabs/victory-native.png?label=ready&title=Ready)](https://waffle.io/FormidableLabs/victory-native)
 # Victory Native
 
-This package imports components from `victory-core-native`, `victory-pie-native`, and `victory-chart-native`
+### Usage
 
-# Usage
 With npm, run:
 ```sh
 $ npm install victory-native --save
