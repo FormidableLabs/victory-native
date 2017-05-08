@@ -48,7 +48,7 @@
   "peerDependencies": {
     "react": "^15.3.0 || >=16.0.0-alpha.6",
     "react-native": ">=0.42.0",
-    "react-native-svg": "^5.1.5"
+    "react-native-svg": "^5.1.8"
   },
   "dependencies": {
     "lodash": "^4.17.4",
