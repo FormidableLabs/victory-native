@@ -29,9 +29,13 @@ class App extends Component {
 export default App;
 ```
 
-### Running demo
+### Demo
 
-the demo requires the [React Native CLI](https://facebook.github.io/react-native/docs/getting-started.html).
+Clone [victory-native-demo][victory-native-demo] and follow the instructions there.
+
+### Local Development
+
+If you'd like to contribute to victory-native, you can use the local demo app to test your changes on the iOS simulator. (But if you're just getting started with `victory-native`, we recommend using [victory-native-demo][victory-native-demo], as it supports Android and is simpler to set up.)
 
 ```sh
 # Install
@@ -47,6 +51,8 @@ $ npm start
 $ npm run demo:ios  # or react-native run-android
 ```
 
+Changes to `lib` will be reflected in the demo app.
+
 Do **not** run `npm install` in the `demo/` directory, or the packager packager will crash due to
 "duplicate @providesModule declarations" found in `node_modules/` and `demo/node_modules`.
 
@@ -61,3 +67,4 @@ This project is in a pre-release state. We're hard at work fixing bugs and impro
 Please review our [Code of Conduct][code] before contributing.
 
 [code]: https://github.com/FormidableLabs/builder-victory-component/blob/master/CONTRIBUTING.md#contributor-covenant-code-of-conduct
+[victory-native-demo]:https://github.com/FormidableLabs/victory-native-demo
