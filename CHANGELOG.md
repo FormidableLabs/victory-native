@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.8.2 (2017-05-08)
+
+- Allows animations on Android (fixed in `react-native-svg`)
+
 ## 0.8.1 (2017-05-05)
 
 - Fixes synthetic event reuse error in VictoryZoomContainer
