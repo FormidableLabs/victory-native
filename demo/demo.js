@@ -443,7 +443,7 @@ export default class Demo extends Component {
             { x: 5, y: 5 }
           ]}
           interpolation="cardinal"
-          label="LINE"
+          labels="LINE"
           style={{
             data: {
               stroke: "#822722",
