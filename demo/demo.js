@@ -1,7 +1,7 @@
 /*global setInterval*/
 /* demo.js is loaded by both index.ios.js and index.android.js */
 
-import { random, range } from "lodash";
+import { random, range, round } from "lodash";
 import React, { Component } from "react";
 import {
   ScrollView,
@@ -26,6 +26,7 @@ import {
   VictoryVoronoiContainer,
   VictorySelectionContainer,
   VictoryBrushContainer,
+  VictoryCursorContainer,
   VictoryPie,
   createContainer
 } from "victory-native";
@@ -133,6 +134,19 @@ export default class Demo extends Component {
         <Text style={styles.text}>{"Victory"}</Text>
         <Text style={styles.text}>{"Native"}</Text>
         <Text style={styles.text}>{"Demo\n"}</Text>
+
+        <Text style={styles.text}>{"VictoryCursorContainer"}</Text>
+        <VictoryChart
+          containerComponent={
+            <VictoryCursorContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              cursorLabel={(d) => (`${round(d.x, 2)} , ${round(d.y, 2)}`)}
+            />
+          }
+        >
+         <VictoryBar/>
+        </VictoryChart>
 
         <Text style={styles.text}>{"VictoryBrushContainer"}</Text>
         <VictoryChart
