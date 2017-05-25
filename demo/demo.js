@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import Svg from "react-native-svg";
 import {
-  VictoryVoronoiTooltip,
   VictoryAxis,
   VictoryChart,
   VictoryGroup,
@@ -817,26 +816,6 @@ export default class Demo extends Component {
         />
 
         <Text style={styles.text}>{"Tooltips"}</Text>
-        <VictoryChart
-          domain={{ y: [-25, 25] }}
-        >
-          <VictoryGroup
-            data={
-              range(10).map((i) => {
-                return {
-                  x: i,
-                  y: random(-20, 20)
-                };
-              })
-            }
-          >
-            <VictoryLine/>
-            <VictoryVoronoiTooltip
-              labels={(d) => `x: ${d.x} \n y: ${d.y}`}
-            />
-          </VictoryGroup>
-        </VictoryChart>
-
         <VictoryChart>
           <VictoryScatter
             labelComponent={<VictoryTooltip/>}

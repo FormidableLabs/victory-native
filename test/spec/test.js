@@ -17,8 +17,7 @@ import {
   VictoryScatter,
   VictoryStack,
   VictoryTooltip,
-  VictoryVoronoi,
-  VictoryVoronoiTooltip
+  VictoryVoronoi
 } from "../../lib";
 
 const components = [
@@ -36,8 +35,7 @@ const components = [
   { component: VictoryScatter, name: "VictoryScatter" },
   { component: VictoryStack, name: "VictoryStack" },
   { component: VictoryTooltip, name: "VictoryTooltip" },
-  { component: VictoryVoronoi, name: "VictoryVoronoi" },
-  { component: VictoryVoronoiTooltip, name: "VictoryVoronoiTooltip" }
+  { component: VictoryVoronoi, name: "VictoryVoronoi" }
 ];
 
 describe("Default render", () => {
