@@ -54,7 +54,7 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
     "victory-chart": "^20.0.0",
-    "victory-core": "^14.1.1",
+    "victory-core": "^15.2.0",
     "victory-pie": "^10.3.0"
   }
 }
