@@ -1,7 +1,7 @@
 /*global setInterval*/
 /* demo.js is loaded by both index.ios.js and index.android.js */
 
-import { random, range } from "lodash";
+import { random, range, round } from "lodash";
 import React, { Component } from "react";
 import {
   ScrollView,
@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import Svg from "react-native-svg";
 import {
-  VictoryVoronoiTooltip,
   VictoryAxis,
   VictoryChart,
   VictoryGroup,
@@ -27,6 +26,7 @@ import {
   VictoryVoronoiContainer,
   VictorySelectionContainer,
   VictoryBrushContainer,
+  VictoryCursorContainer,
   VictoryPie,
   createContainer
 } from "victory-native";
@@ -134,6 +134,19 @@ export default class Demo extends Component {
         <Text style={styles.text}>{"Victory"}</Text>
         <Text style={styles.text}>{"Native"}</Text>
         <Text style={styles.text}>{"Demo\n"}</Text>
+
+        <Text style={styles.text}>{"VictoryCursorContainer"}</Text>
+        <VictoryChart
+          containerComponent={
+            <VictoryCursorContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              cursorLabel={(d) => (`${round(d.x, 2)} , ${round(d.y, 2)}`)}
+            />
+          }
+        >
+         <VictoryBar/>
+        </VictoryChart>
 
         <Text style={styles.text}>{"VictoryBrushContainer"}</Text>
         <VictoryChart
@@ -444,7 +457,7 @@ export default class Demo extends Component {
             { x: 5, y: 5 }
           ]}
           interpolation="cardinal"
-          label="LINE"
+          labels="LINE"
           style={{
             data: {
               stroke: "#822722",
@@ -817,26 +830,6 @@ export default class Demo extends Component {
         />
 
         <Text style={styles.text}>{"Tooltips"}</Text>
-        <VictoryChart
-          domain={{ y: [-25, 25] }}
-        >
-          <VictoryGroup
-            data={
-              range(10).map((i) => {
-                return {
-                  x: i,
-                  y: random(-20, 20)
-                };
-              })
-            }
-          >
-            <VictoryLine/>
-            <VictoryVoronoiTooltip
-              labels={(d) => `x: ${d.x} \n y: ${d.y}`}
-            />
-          </VictoryGroup>
-        </VictoryChart>
-
         <VictoryChart>
           <VictoryScatter
             labelComponent={<VictoryTooltip/>}
