@@ -24,13 +24,14 @@
     "test": "mocha --compilers test/compiler.js --recursive test/spec/*.js"
   },
   "devDependencies": {
+    "@jonny/react-native-mock": "^0.4.0",
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
     "babel-plugin-module-resolver": "^2.5.0",
     "babel-preset-react-native": "^1.9.0",
     "babel-register": "^6.11.6",
     "chai": "^3.5.0",
-    "enzyme": "^2.4.1",
+    "enzyme": "^2.8.2",
     "eslint": "^2.0.0",
     "eslint-config-formidable": "^2.0.1",
     "eslint-plugin-filenames": "^1.2.0",
@@ -39,11 +40,12 @@
     "mocha": "^3.0.2",
     "react": "^16.0.0-alpha.12",
     "react-addons-test-utils": "^15.5.1",
-    "react-dom": "^15.5.4",
+    "react-dom": "^16.0.0-alpha.12",
     "react-native": "^0.45.0",
-    "react-native-mock": "^0.2.5",
+    "react-native-mock": "^0.3.1",
     "react-native-svg": "^5.2.0",
-    "react-native-svg-mock": "^1.0.2"
+    "react-native-svg-mock": "^1.0.2",
+    "react-test-renderer": "^16.0.0-alpha.12"
   },
   "peerDependencies": {
     "react": "^16.0.0-alpha.12",

@@ -4,7 +4,7 @@ var babel = require("babel-core");
 var origJs = require.extensions[".js"];
 
 // Mock react-native and react-native-svg
-require("react-native-mock/mock");
+require("@jonny/react-native-mock/mock");
 require("react-native-svg-mock/mock");
 
 // Compile a path with babel
