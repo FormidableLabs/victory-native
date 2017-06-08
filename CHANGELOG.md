@@ -1,5 +1,13 @@
 # VictoryNative Changelog
 
+## 0.10.0 (2017-06-08)
+
+- Fixes animations on VictoryLine and VictoryArea. Requires upgrades to `react`, `react-native`, `react-native-svg`.
+
+## 0.9.0 (2017-05-26)
+
+- VictoryCursorContainer, dep upgrades, remove VictoryZoom + VictoryVoronoiTooltip
+
 ## 0.8.2 (2017-05-08)
 
 - Allows animations on Android (fixed in `react-native-svg`)
