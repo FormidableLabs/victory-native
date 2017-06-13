@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.10.1 (2017-06-13)
+
+- Peg `react` to exact alpha version, `16.0.0-alpha.12`. 
+
 ## 0.10.0 (2017-06-08)
 
 - Fixes animations on VictoryLine and VictoryArea. Requires upgrades to `react`, `react-native`, `react-native-svg`.
