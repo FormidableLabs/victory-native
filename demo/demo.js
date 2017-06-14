@@ -29,6 +29,7 @@ import {
   VictoryBrushContainer,
   VictoryCursorContainer,
   VictoryPie,
+  VictoryLabel,
   createContainer
 } from "victory-native";
 
@@ -138,13 +139,6 @@ export default class Demo extends Component {
         <Text style={styles.text}>{"Native"}</Text>
         <Text style={styles.text}>{"Demo\n"}</Text>
 
-        <VictoryPolarAxis
-          theme={VictoryTheme.material}
-          startAngle={0} endAngle={180}
-          labelPlacement="perpendicular"
-          tickValues={["Cat", "Dog", "Bird", "Snake"]}
-        />
-
         <VictoryChart polar theme={VictoryTheme.material}>
           <VictoryBar
             style={{ data: { fill: "tomato", opacity: 0.5 } }}
@@ -180,7 +174,8 @@ export default class Demo extends Component {
             />
           }
         >
-         <VictoryBar/>
+          <VictoryAxis tickLabelComponent={<VictoryLabel angle={45}/>}/>
+          <VictoryBar/>
         </VictoryChart>
 
         <Text style={styles.text}>{"VictoryBrushContainer"}</Text>
@@ -193,7 +188,7 @@ export default class Demo extends Component {
             />
           }
         >
-         <VictoryBar/>
+          <VictoryBar/>
         </VictoryChart>
 
         <Text style={styles.text}>{"VictorySelectionContainer"}</Text>
