@@ -51,6 +51,6 @@
     "victory-chart-native": "^1.1.0",
     "victory-core": "~9.2.4",
     "victory-core-native": "^3.0.0",
-    "victory-pie-native": "github:formidablelabs/victory-pie-native#v1.1.0-patch"
+    "victory-pie-native": "~1.1.1"
   }
 }
