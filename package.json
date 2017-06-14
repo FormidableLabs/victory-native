@@ -49,8 +49,8 @@
   "dependencies": {
     "react": "^15.3.0",
     "victory-chart-native": "^1.1.0",
-    "victory-core": "~7.0.2",
-    "victory-core-native": "^2.1.0",
+    "victory-core": "~9.2.4",
+    "victory-core-native": "^3.0.0",
     "victory-pie-native": "^1.0.0"
   }
 }
