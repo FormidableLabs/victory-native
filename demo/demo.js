@@ -12,7 +12,6 @@ import {
 import Svg from "react-native-svg";
 import {
   VictoryAxis,
-  VictoryPolarAxis,
   VictoryChart,
   VictoryGroup,
   VictoryStack,
