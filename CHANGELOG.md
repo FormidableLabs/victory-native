@@ -1,9 +1,13 @@
 # VictoryNative Changelog
 
+## 0.3.1 (2017-06-14)
+
+- Eliminate multiple `victory-core` and `victory-core-native` dependencies, which came both directly and indirectly
+
 ## 0.3.0 (2016-09-18)
 
 - Adds support for VictoryTooltip
-- Adds support for VictoryVoronoi 
+- Adds support for VictoryVoronoi
 - Adds support for VictoryVoronoiTooltip
 - Portal pattern for tooltips is *not* supported in this release
 
