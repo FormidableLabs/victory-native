@@ -36,6 +36,8 @@
 
 ## 0.7.0 (2017-03-19)
 
+- Removes victory-chart-native, victory-pie-native, victory-core-native
+- Depends directly on victory-chart and victory-pie (victory-core was already a dep)
 - Upgrades to `react-native@~0.42.0` and `react-native-svg@^5.1.5`
 - Fixes broken demos
 
