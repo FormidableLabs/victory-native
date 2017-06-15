@@ -5,6 +5,7 @@ import { expect } from "chai";
 import {
   VictoryArea,
   VictoryAxis,
+  VictoryPolarAxis,
   VictoryBar,
   VictoryCandlestick,
   VictoryChart,
@@ -23,6 +24,7 @@ import {
 const components = [
   { component: VictoryArea, name: "VictoryArea" },
   { component: VictoryAxis, name: "VictoryAxis" },
+  { component: VictoryPolarAxis, name: "VictoryPolarAxis" },
   { component: VictoryBar, name: "VictoryBar" },
   { component: VictoryCandlestick, name: "VictoryCandlestick" },
   { component: VictoryChart, name: "VictoryChart" },
