@@ -44,7 +44,7 @@
     "react-native": "^0.45.0",
     "react-native-mock": "^0.3.1",
     "react-native-svg": "^5.2.0",
-    "react-native-svg-mock": "^1.0.2",
+    "react-native-svg-mock": "^1.1.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "peerDependencies": {
@@ -55,8 +55,8 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
-    "victory-chart": "^20.0.0",
-    "victory-core": "^15.2.0",
-    "victory-pie": "^10.3.0"
+    "victory-chart": "^21.1.2",
+    "victory-core": "^16.0.0",
+    "victory-pie": "^11.0.0"
   }
 }
