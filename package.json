@@ -55,7 +55,7 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
-    "victory-chart": "git://github.com/formidablelabs/victory-chart#support-native-polar",
+    "victory-chart": "^21.1.2",
     "victory-core": "^16.0.0",
     "victory-pie": "^11.0.0"
   }
