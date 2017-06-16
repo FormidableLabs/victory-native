@@ -1,8 +1,16 @@
 # VictoryNative Changelog
 
+## 0.11.0 (2017-06-16)
+
+[104](https://github.com/FormidableLabs/victory-native/pull/104) Supports polar charts for victory-native
+
+**Breaking Change**
+- Temporarily disables all rotation transformations on text elements due to an underlying [issue](https://github.com/react-native-community/react-native-svg/issues/242) in `react-native-svg`
+
+
 ## 0.10.1 (2017-06-13)
 
-- Peg `react` to exact alpha version, `16.0.0-alpha.12`. 
+- Peg `react` to exact alpha version, `16.0.0-alpha.12`.
 
 ## 0.10.0 (2017-06-08)
 

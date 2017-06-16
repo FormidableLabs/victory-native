@@ -1,6 +1,6 @@
 {
   "name": "victory-native",
-  "version": "0.10.1",
+  "version": "0.11.1",
   "description": "Shared libraries and components for Victory",
   "main": "lib/index.js",
   "files": [
