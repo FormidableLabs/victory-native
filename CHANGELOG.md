@@ -1,6 +1,6 @@
 # VictoryNative Changelog
 
-## 0.11.0 (2017-06-16)
+## 0.11.1 (2017-06-16)
 
 [104](https://github.com/FormidableLabs/victory-native/pull/104) Supports polar charts for victory-native
 
