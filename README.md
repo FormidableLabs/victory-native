@@ -3,18 +3,30 @@
 
 ### Usage
 
-With npm, run:
+Install victory-native:
 ```sh
 $ npm install victory-native --save
 ```
-Link react-native-svg with:
+
+Install react-native-svg:
+```sh
+$ npm install react-native-svg --save
+```
+
+**Note:** react-native-svg has strict version requirements for both react and react-native.
+See the up-to-date requirements on the [react-native-svg Readme][react-native-svg-readme].
+We encourage you to use the latest version of react-native-svg possible for your project,
+as victory-native issues are frequently solved by react-native-svg bugfixes.
+
+Link react-native-svg:
 ```sh
 $ react-native link react-native-svg
 ```
 
-Import charts from `victory-native`. E.g.,
+Import charts from `victory-native`. For example,
+
 ```jsx
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 import { VictoryBar } from "victory-native";
 
@@ -35,7 +47,7 @@ Clone [victory-native-demo][victory-native-demo] and follow the instructions the
 
 ### Local Development
 
-If you'd like to contribute to victory-native, you can use the local demo app to test your changes on the iOS simulator. (But if you're just getting started with `victory-native`, we recommend using [victory-native-demo][victory-native-demo], as it supports Android and is simpler to set up.)
+If you'd like to contribute to victory-native, you can use the local demo app to test your changes on the iOS simulator. (But if you're just getting started with `victory-native` and want to see a demo, we recommend using [victory-native-demo][victory-native-demo], as it supports Android and is simpler to set up.)
 
 ```sh
 # Install
@@ -48,7 +60,7 @@ $ npm install
 $ npm start
 
 # Run the demo from a new terminal window
-$ npm run demo:ios  # or react-native run-android
+$ npm run demo:ios
 ```
 
 Changes to `lib` will be reflected in the demo app.
@@ -68,3 +80,4 @@ Please review our [Code of Conduct][code] before contributing.
 
 [code]: https://github.com/FormidableLabs/builder-victory-component/blob/master/CONTRIBUTING.md#contributor-covenant-code-of-conduct
 [victory-native-demo]:https://github.com/FormidableLabs/victory-native-demo
+[react-native-svg-readme]: https://github.com/react-native-community/react-native-svg#notice
