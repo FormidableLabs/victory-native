@@ -29,6 +29,7 @@ import {
   VictoryCursorContainer,
   VictoryPie,
   VictoryLabel,
+  VictoryLegend,
   createContainer
 } from "victory-native";
 
@@ -62,6 +63,51 @@ const candleData = [
   { x: 7, open: 30, close: 90, high: 95, low: 30 },
   { x: 8, open: 80, close: 81, high: 83, low: 75 }
 ];
+
+const legendData = [{
+  name: "Series 1",
+  symbol: {
+    type: "circle",
+    fill: "green"
+  }
+}, {
+  name: "Long Series Name",
+  symbol: {
+    type: "triangleUp",
+    fill: "blue"
+  }
+}, {
+  name: "Series 3",
+  symbol: {
+    type: "diamond",
+    fill: "pink"
+  }
+}, {
+  name: "Series 4",
+  symbol: {
+    type: "plus"
+  }
+}, {
+  name: "Series 5",
+  symbol: {
+    type: "star",
+    fill: "red"
+  },
+  labels: {
+    fill: "purple"
+  }
+}, {
+  name: "Series 6",
+  symbol: {
+    type: "circle",
+    fill: "orange"
+  },
+  labels: {
+    fill: "blue"
+  }
+}];
+
+const legendStyle = { parent: { marginBottom: 20 } };
 
 const VictoryZoomVoronoiContainer = createContainer("zoom", "voronoi");
 
@@ -137,6 +183,17 @@ export default class Demo extends Component {
         <Text style={styles.text}>{"Victory"}</Text>
         <Text style={styles.text}>{"Native"}</Text>
         <Text style={styles.text}>{"Demo\n"}</Text>
+
+        <VictoryLegend
+          data={legendData}
+          style={legendStyle}
+        />
+        <VictoryLegend
+          data={legendData}
+          itemsPerRow={4}
+          orientation="horizontal"
+          style={legendStyle}
+        />
 
         <VictoryChart polar theme={VictoryTheme.material}>
           <VictoryBar
