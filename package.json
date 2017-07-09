@@ -41,16 +41,16 @@
     "react": "16.0.0-alpha.12",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "16.0.0-alpha.12",
-    "react-native": "^0.45.0",
+    "react-native": "~0.45.0",
     "react-native-mock": "^0.3.1",
-    "react-native-svg": "^5.2.0",
+    "react-native-svg": "~5.2.0",
     "react-native-svg-mock": "^1.1.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "peerDependencies": {
     "react": "16.0.0-alpha.12",
-    "react-native": "^0.45.1",
-    "react-native-svg": "^5.2.0"
+    "react-native": "~0.45.1",
+    "react-native-svg": "~5.2.0"
   },
   "dependencies": {
     "lodash": "^4.17.4",
