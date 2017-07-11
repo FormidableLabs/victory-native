@@ -19,7 +19,7 @@ $ npm install react-native-svg --save
   - `react-native`
 
 **Note:** `react-native-svg` has strict version requirements for both `react` and `react-native`. Please match versions to those required by `react-native-svg`. See the up-to-date requirements on the [react-native-svg Readme][react-native-svg-readme].
-We encourage you to use the latest version of react-native-svg possible for your project, as victory-native issues are frequently solved by react-native-svg bugfixes.
+We encourage you to use the latest version of `react-native-svg` possible for your project, as `victory-native` issues are frequently solved by `react-native-svg` bugfixes.
 
 Link react-native-svg:
 ```sh
@@ -50,7 +50,7 @@ Clone [victory-native-demo][victory-native-demo] and follow the instructions the
 
 ### Local Development
 
-If you'd like to contribute to victory-native, you can use the local demo app to test your changes on the iOS simulator. (But if you're just getting started with `victory-native` and want to see a demo, we recommend using [victory-native-demo][victory-native-demo], as it supports Android and is simpler to set up.)
+If you'd like to contribute to `victory-native`, you can use the local demo app to test your changes on the iOS simulator. (But if you're just getting started with `victory-native` and want to see a demo, we recommend using [victory-native-demo][victory-native-demo], as it supports Android and is simpler to set up.)
 
 ```sh
 # Install
