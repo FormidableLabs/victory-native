@@ -24,7 +24,7 @@
     "test": "mocha --compilers test/compiler.js --recursive test/spec/*.js"
   },
   "devDependencies": {
-    "@jonny/react-native-mock": "^0.4.0",
+    "@jonny/react-native-mock": "0.4.0",
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
     "babel-plugin-module-resolver": "^2.5.0",
