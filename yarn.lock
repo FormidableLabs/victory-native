@@ -3439,7 +3439,7 @@ react-native-svg-mock@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-native-svg-mock/-/react-native-svg-mock-1.1.0.tgz#f32fd10f2481215a2378d7562d47e93fad87482f"
 
-react-native-svg@^5.2.0:
+react-native-svg@~5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-5.2.0.tgz#0ed24e04ee9f755b5a6fc840ff69792207e08aca"
   dependencies:
@@ -3447,7 +3447,7 @@ react-native-svg@^5.2.0:
     lodash "^4.16.6"
     react-native "^0.45.0"
 
-react-native@^0.45.0:
+react-native@^0.45.0, react-native@~0.45.0:
   version "0.45.1"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.45.1.tgz#b3283c4a88233421f9c662a2ff1a4ccc8a9f07c0"
   dependencies:
