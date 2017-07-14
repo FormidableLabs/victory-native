@@ -1,5 +1,10 @@
 # VictoryNative Changelog
 
+## 0.13.0 (2017-07-14)
+
+[116](https://github.com/FormidableLabs/victory-native/pull/116) remove peerDependencies; use ~ deps
+[113](https://github.com/FormidableLabs/victory-native/pull/113) Improve VictoryArea
+
 ## 0.12.0 (2017-06-20)
 
 [111](https://github.com/FormidableLabs/victory-native/pull/111) Adds VictoryLegend
