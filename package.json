@@ -24,7 +24,7 @@
     "test": "mocha --compilers test/compiler.js --recursive test/spec/*.js"
   },
   "devDependencies": {
-    "@jonny/react-native-mock": "^0.4.0",
+    "@jonny/react-native-mock": "0.4.0",
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
     "babel-plugin-module-resolver": "^2.5.0",
@@ -50,8 +50,8 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
-    "victory-chart": "^21.1.2",
-    "victory-core": "^16.0.0",
-    "victory-pie": "^11.0.0"
+    "victory-chart": "^21.3.0",
+    "victory-core": "^16.3.0",
+    "victory-pie": "^11.3.0"
   }
 }

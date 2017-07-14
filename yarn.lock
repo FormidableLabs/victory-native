@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@jonny/react-native-mock@^0.4.0":
+"@jonny/react-native-mock@0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@jonny/react-native-mock/-/react-native-mock-0.4.0.tgz#596a119ca83be75b1e39e8cdb1957eba47adb892"
   dependencies:
@@ -4258,17 +4258,17 @@ vhost@~3.0.1:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/vhost/-/vhost-3.0.2.tgz#2fb1decd4c466aa88b0f9341af33dc1aff2478d5"
 
-victory-chart@^21.1.2:
-  version "21.1.2"
-  resolved "https://registry.yarnpkg.com/victory-chart/-/victory-chart-21.1.2.tgz#755ebde5790009ddf0e0970c58ab89263c7ab299"
+victory-chart@^21.3.0:
+  version "21.3.0"
+  resolved "https://registry.yarnpkg.com/victory-chart/-/victory-chart-21.3.0.tgz#ed4dc601ec9ccd55d0396017473e3871b82778bd"
   dependencies:
     d3-voronoi "^1.1.2"
     lodash "^4.17.4"
-    victory-core "^16.0.2"
+    victory-core "^16.3.0"
 
-victory-core@^16.0.0, victory-core@^16.0.2:
-  version "16.0.2"
-  resolved "https://registry.yarnpkg.com/victory-core/-/victory-core-16.0.2.tgz#580d4827e72a21d12053d14e9fd8ed66c3edf46b"
+victory-core@^16.3.0:
+  version "16.3.0"
+  resolved "https://registry.yarnpkg.com/victory-core/-/victory-core-16.3.0.tgz#02363c31e51c803832422283e7051047adfa33b9"
   dependencies:
     d3-ease "^1.0.0"
     d3-interpolate "^1.1.1"
@@ -4277,13 +4277,13 @@ victory-core@^16.0.0, victory-core@^16.0.2:
     d3-timer "^1.0.0"
     lodash "^4.17.4"
 
-victory-pie@^11.0.0:
-  version "11.1.2"
-  resolved "https://registry.yarnpkg.com/victory-pie/-/victory-pie-11.1.2.tgz#9af175e58b90fbe27a9d1d1cf82252636e288809"
+victory-pie@^11.3.0:
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/victory-pie/-/victory-pie-11.3.0.tgz#ab948ea813b8fb50fa3ca6bfdbf55785be501720"
   dependencies:
     d3-shape "^1.0.0"
     lodash "^4.17.4"
-    victory-core "^16.0.0"
+    victory-core "^16.3.0"
 
 vinyl@^0.5.0:
   version "0.5.3"
