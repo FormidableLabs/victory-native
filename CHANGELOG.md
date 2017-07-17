@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.14.0 (2017-07-17)
+
+[119](https://github.com/FormidableLabs/victory-native/pull/119) Transform slices rather than entire VictoryPie group
+
 ## 0.13.0 (2017-07-14)
 
 [116](https://github.com/FormidableLabs/victory-native/pull/116) remove peerDependencies; use ~ deps
