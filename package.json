@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "files": [
     "lib",
-    "index.js"
+    "index.js",
+    "LICENSE.txt"
   ],
   "repository": {
     "type": "git",
