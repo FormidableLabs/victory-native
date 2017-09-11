@@ -1,5 +1,10 @@
 # VictoryNative Changelog
 
+## 0.15.0 (2017-09-11)
+
+[157](https://github.com/FormidableLabs/victory-native/pull/157) Supports changes related to VictoryLegend
+[More details](https://github.com/FormidableLabs/victory-core/blob/master/CHANGELOG.md#1800-2017-09-09)
+
 ## 0.14.0 (2017-07-17)
 
 [119](https://github.com/FormidableLabs/victory-native/pull/119) Transform slices rather than entire VictoryPie group
