@@ -44,6 +44,10 @@ class App extends Component {
 export default App;
 ```
 
+### Documentation
+
+Full documentation can be found [here](https://formidable.com/open-source/victory/docs/native/).
+
 ### Demo
 
 Clone [victory-native-demo][victory-native-demo] and follow the instructions there.
