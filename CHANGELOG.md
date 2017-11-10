@@ -1,5 +1,11 @@
 # VictoryNative Changelog
 
+## 0.16.0 (2017-11-07)
+
+[176](https://github.com/FormidableLabs/victory-native/pull/176)
+- Updates `react-*` and `victory-*` dependencies to latest versions
+- Adds a temporary fix for text rotations. More robust fix pending resolution of [react-native-svg#242](https://github.com/react-native-community/react-native-svg/issues/242)
+
 ## 0.15.0 (2017-09-11)
 
 [157](https://github.com/FormidableLabs/victory-native/pull/157) Supports changes related to VictoryLegend
