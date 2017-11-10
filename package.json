@@ -44,7 +44,7 @@
     "react-dom": "^16.0.0",
     "react-native": "~0.50.0",
     "react-native-svg": "^6.0.0",
-    "react-native-svg-mock": "git+https://github.com/FormidableLabs/react-native-svg-mock#update-for-rnsvg-6",
+    "react-native-svg-mock": "^2.0.0",
     "react-test-renderer": "^16.0.0"
   },
   "dependencies": {
