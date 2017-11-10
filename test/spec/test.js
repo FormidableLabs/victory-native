@@ -1,5 +1,6 @@
-import React from "react-native";
-import { render } from "enzyme";
+import React from "react";
+import enzyme from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 import { expect } from "chai";
 
 import {
@@ -20,6 +21,8 @@ import {
   VictoryTooltip,
   VictoryVoronoi
 } from "../../lib";
+
+enzyme.configure({ adapter: new Adapter() });
 
 const components = [
   { component: VictoryArea, name: "VictoryArea" },
@@ -43,7 +46,7 @@ const components = [
 describe("Default render", () => {
   components.forEach((c) => {
     it(`should work for ${c.name}`, () => {
-      const wrapper = render(React.createElement(c.component));
+      const wrapper = enzyme.shallow(React.createElement(c.component));
       expect(wrapper).to.have.length(1);
     });
   });
