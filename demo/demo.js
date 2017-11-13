@@ -548,7 +548,7 @@ export default class Demo extends Component {
             { x: 5, y: 5 }
           ]}
           interpolation="cardinal"
-          labels="LINE"
+          labels={() => "LINE"}
           style={{
             data: {
               stroke: "#822722",
