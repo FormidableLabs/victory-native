@@ -1,5 +1,22 @@
 # VictoryNative Changelog
 
+## 0.16.1 (2017-11-14)
+
+- [180](https://github.com/FormidableLabs/victory-native/pull/180) Fix unsupported style bug
+- [181](https://github.com/FormidableLabs/victory-native/pull/181) Fix container styles
+
+VictoryCore
+- [316] (https://github.com/FormidableLabs/victory-core/pull/316)
+  - adds `cornerRadius` prop for `Bar`
+  - adds `barRatio` prop for `Bar`
+  - removes rounding from calculated paths
+  - fixes a domain bug for negative bars and areas
+
+VictoryChart
+- [538](https://github.com/FormidableLabs/victory-chart/pull/538) Adds `barRatio` and `cornerRadius` props to `VictoryBar`
+
+- [539](https://github.com/FormidableLabs/victory-chart/pull/539) Fixes a bug in bubble plots
+
 ## 0.16.0 (2017-11-07)
 
 [176](https://github.com/FormidableLabs/victory-native/pull/176)
