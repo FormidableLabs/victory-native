@@ -49,19 +49,7 @@ class App extends Component {
 export default App;
 ```
 
-### Documentation
-
-Full documentation can be found [here](https://formidable.com/open-source/victory/docs/native/).
-
-### Demo
-
-Clone [victory-native-demo][victory-native-demo] and follow the instructions there.
-
-### Documentation
-
-See the docs and examples on the website https://formidable.com/open-source/victory/docs/native
-
-### Local Development
+### Local Development and Demo
 
 If you'd like to contribute to `victory-native`, you can use the local demo app to test your changes on the iOS simulator. (But if you're just getting started with `victory-native` and want to see a demo, we recommend using [victory-native-demo][victory-native-demo], as it supports Android and is simpler to set up.)
 
@@ -83,6 +71,10 @@ Changes to `lib` will be reflected in the demo app.
 
 Do **not** run `npm install` in the `demo/` directory, or the packager packager will crash due to
 "duplicate @providesModule declarations" found in `node_modules/` and `demo/node_modules`.
+
+### Documentation
+
+See the docs and examples on the website https://formidable.com/open-source/victory/docs/native
 
 ## _IMPORTANT_
 
