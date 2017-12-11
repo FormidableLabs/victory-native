@@ -42,8 +42,8 @@
     "mocha": "^3.0.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-native": "~0.50.0",
-    "react-native-svg": "^6.0.0",
+    "react-native": "~0.51.0",
+    "react-native-svg": "6.0.1-rc.1",
     "react-native-svg-mock": "^2.0.0",
     "react-test-renderer": "^16.0.0"
   },
