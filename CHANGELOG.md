@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.16.2 (2017-12-19)
+
+- [203](https://github.com/FormidableLabs/victory-native/pull/203) Transform parsing for `react-native-svg@6.0.1-rc.1`. **requires `react-native-svg@6.0.1-rc.1`**
+
 ## 0.16.1 (2017-11-14)
 
 - [180](https://github.com/FormidableLabs/victory-native/pull/180) Fix unsupported style bug
