@@ -1,6 +1,10 @@
 # VictoryNative Changelog
 
-## 0.16.2 (2017-12-19)
+## 0.16.3 (2017-12-18)
+
+- [214](https://github.com/FormidableLabs/victory-native/pull/214) Fixes bugs in `VictoryZoomContainer` and `VictoryContainer`
+
+## 0.16.2 (2017-12-17)
 
 - [203](https://github.com/FormidableLabs/victory-native/pull/203) Transform parsing for `react-native-svg@6.0.1-rc.1`. **requires `react-native-svg@6.0.1-rc.1`**
 
