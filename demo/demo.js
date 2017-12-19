@@ -31,7 +31,9 @@ import {
   VictoryPie,
   VictoryLabel,
   VictoryLegend,
-  createContainer
+  createContainer,
+  VictoryPortal,
+  Bar
 } from "victory-native";
 
 import { VictoryTheme } from "victory-core";
@@ -947,6 +949,28 @@ export default class Demo extends Component {
               }
             ]}
           />
+        </VictoryChart>
+        <VictoryChart
+          events={[
+            {
+              childName: "bar",
+              target: "data",
+              eventHandlers: {
+                onPressIn: () => {
+                  return [
+                    {
+                      mutation: () => {
+                        return { style: { fill: "orange" } };
+                      }
+                    }
+                  ];
+                }
+              }
+            }
+          ]}
+        >
+          <VictoryBar name="bar" dataComponent={<VictoryPortal><Bar/></VictoryPortal>}/>
+          <VictoryAxis tickFormat={["one", "two", "three", "four"]}/>
         </VictoryChart>
       </ScrollView>
     );
