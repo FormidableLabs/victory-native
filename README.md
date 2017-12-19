@@ -17,7 +17,7 @@ Link react-native:
 ```sh
 $ react-native link react-native-svg
 ```
-**NOTE: Please read about [Peer Dependencies and Version Requirements]**
+**NOTE: Please read about [Peer Dependencies and Version Requirements](#peer-dependencies-and-version-requirements)**
 
 Import charts from `victory-native`. For example,
 
@@ -37,7 +37,7 @@ class App extends Component {
 export default App;
 ```
 
-## Peer Dependencies and Version Requirements
+### Peer Dependencies and Version Requirements
 
 **Note:** `victory-native` requires the following peer dependencies:
   - `react-native-svg`
