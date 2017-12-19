@@ -13,23 +13,11 @@ Install react-native-svg:
 $ npm install react-native-svg --save
 ```
 
-**Note:** `victory-native` requires the following peer dependencies:
-  - `react-native-svg`
-  - `react`
-  - `react-native`
-
-**Note:** `react-native-svg` has strict version requirements for both `react` and `react-native`. Please match versions to those required by `react-native-svg`. See the up-to-date requirements on the [react-native-svg Readme][react-native-svg-readme].
-We encourage you to use the latest version of `react-native-svg` possible for your project, as `victory-native` issues are frequently solved by `react-native-svg` bugfixes.
-
-**Version Requirements**
-
-`victory-native@~0.15.0` requires peer dependency `react-native-svg@^5.0.0`
-`victory-native@~0.16.0` requires peer dependency `react-native-svg@^6.0.0`
-
-Link react-native-svg:
+Link react-native:
 ```sh
 $ react-native link react-native-svg
 ```
+**NOTE: Please read about [Peer Dependencies and Version Requirements]**
 
 Import charts from `victory-native`. For example,
 
@@ -48,6 +36,23 @@ class App extends Component {
 
 export default App;
 ```
+
+## Peer Dependencies and Version Requirements
+
+**Note:** `victory-native` requires the following peer dependencies:
+  - `react-native-svg`
+  - `react`
+  - `react-native`
+
+**Note:** `react-native-svg` has strict version requirements for both `react` and `react-native`. Please match versions to those required by `react-native-svg`. See the up-to-date requirements on the [react-native-svg Readme][react-native-svg-readme].
+We encourage you to use the latest version of `react-native-svg` possible for your project, as `victory-native` issues are frequently solved by `react-native-svg` bugfixes.
+
+* `victory-native@~0.15.0` requires `react-native-svg@^5.0.0`
+* `victory-native@~0.16.0` requires `react-native-svg@6.0.0`
+* `victory-native@~0.16.2` requires `react-native-svg@6.0.1-rc.1`
+
+
+
 
 ### Local Development and Demo
 
