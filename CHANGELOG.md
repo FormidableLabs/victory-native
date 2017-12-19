@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.16.4 (2017-12-19)
+
+- [215](https://github.com/FormidableLabs/victory-native/pull/215) Fixes a bug with press events and VictoryPortal
+
 ## 0.16.3 (2017-12-18)
 
 - [214](https://github.com/FormidableLabs/victory-native/pull/214) Fixes bugs in `VictoryZoomContainer` and `VictoryContainer`
