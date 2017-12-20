@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.16.5 (2017-12-20)
+
+- [221](https://github.com/FormidableLabs/victory-native/pull/221) Fixes a bug with circular clipPaths
+
 ## 0.16.4 (2017-12-19)
 
 - [215](https://github.com/FormidableLabs/victory-native/pull/215) Fixes a bug with press events and VictoryPortal

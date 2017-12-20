@@ -1,9 +1,13 @@
 {
   "name": "victory-native",
-  "version": "0.16.4",
+  "version": "0.16.5",
   "description": "Shared libraries and components for Victory",
   "main": "lib/index.js",
-  "files": ["lib", "index.js", "LICENSE.txt"],
+  "files": [
+    "lib",
+    "index.js",
+    "LICENSE.txt"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/FormidableLabs/victory-native.git"
