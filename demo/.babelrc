@@ -1,10 +1,3 @@
 {
-  "presets": ["react-native"],
-  "plugins": [
-      ["module-resolver", {
-        "alias": {
-          "victory-native": "./lib"
-        }
-      }]
-    ]
+  "presets": ["react-native"]
 }

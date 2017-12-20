@@ -3,11 +3,7 @@
   "version": "0.16.4",
   "description": "Shared libraries and components for Victory",
   "main": "lib/index.js",
-  "files": [
-    "lib",
-    "index.js",
-    "LICENSE.txt"
-  ],
+  "files": ["lib", "index.js", "LICENSE.txt"],
   "repository": {
     "type": "git",
     "url": "https://github.com/FormidableLabs/victory-native.git"
@@ -19,7 +15,8 @@
   },
   "homepage": "https://github.com/FormidableLabs/victory-native#readme",
   "scripts": {
-    "start": "./node_modules/react-native/scripts/packager.sh start --reset-cache --projectRoots `pwd`,`pwd`/demo",
+    "start":
+      "./node_modules/react-native/scripts/packager.sh start --reset-cache",
     "demo:ios": "react-native run-ios --project-path demo/ios",
     "lint": "eslint test/spec/**/*.js lib/**/*.js demo/**/*.js",
     "test": "mocha --compilers test/compiler.js --recursive test/spec/*.js"
