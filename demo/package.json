@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "dependencies": {
     "lodash": "^4.17.4",
-    "react": "~15.4.1",
-    "react-native": "0.42.0",
-    "react-native-svg": "^5.1.5",
+    "react": "^16.0.0",
+    "react-native": "~0.51.0",
+    "react-native-svg": "6.0.1-rc.1",
     "victory-native": "*"
   },
   "devDependencies": {
