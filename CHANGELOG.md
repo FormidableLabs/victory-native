@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.16.6 (2018-01-03)
+
+-[232](https://github.com/FormidableLabs/victory-native/pull/232) Import from victory-*/es instead of victory-*/src
+
 ## 0.16.5 (2017-12-20)
 
 - [221](https://github.com/FormidableLabs/victory-native/pull/221) Fixes a bug with circular clipPaths
