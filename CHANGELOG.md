@@ -1,5 +1,10 @@
 # VictoryNative Changelog
 
+## 0.17.0 (2018-02-06)
+
+-[250](https://github.com/FormidableLabs/victory-native/pull/250) Refactors all primitive components and updates to `victory@0.25.2` dependencies. See [CHANGELOG](https://github.com/FormidableLabs/victory/blob/master/CHANGELOG.md#0250-2018-02-04).
+   *Note: `VictoryBrushLine` is not implemented in `victory-native`*
+
 ## 0.16.6 (2018-01-03)
 
 -[232](https://github.com/FormidableLabs/victory-native/pull/232) Import from victory-*/es instead of victory-*/src

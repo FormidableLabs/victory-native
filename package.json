@@ -1,6 +1,6 @@
 {
   "name": "victory-native",
-  "version": "0.16.6",
+  "version": "0.17.0",
   "description": "Shared libraries and components for Victory",
   "main": "lib/index.js",
   "files": [
@@ -43,7 +43,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-native": "~0.51.0",
-    "react-native-svg": "6.0.1-rc.1",
+    "react-native-svg": "^6.1.0",
     "react-native-svg-mock": "^2.0.0",
     "react-test-renderer": "^16.0.0"
   },
