@@ -17,7 +17,8 @@ const sections = [
       {
         key: "ContainersView",
         title: "Cursor, Brush, Selection, Zoom, Voronoi"
-      }
+      },
+      { key: "CreateContainerView", title: "createContainer()" }
     ],
     title: "Containers"
   },

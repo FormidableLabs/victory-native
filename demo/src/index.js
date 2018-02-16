@@ -4,11 +4,13 @@ import ComponentsView from "./views/components-view";
 import LegendsView from "./views/legends-view";
 import AxisView from "./views/axis-view";
 import ContainersView from "./views/containers-view";
+import CreateContainerView from "./views/create-container-view";
 
 export default stackNavigator(
   {
     ComponentsView: { screen: ComponentsView },
     ContainersView: { screen: ContainersView },
+    CreateContainerView: { screen: CreateContainerView },
     LegendsView: { screen: LegendsView },
     AxisView: { screen: AxisView }
   },
