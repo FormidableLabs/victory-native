@@ -1,8 +1,11 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
     flex: 1
+  },
+  monospace: {
+    fontFamily: Platform.OS === "ios" ? "Menlo" : "monospace"
   },
   contentContainer: {
     alignItems: "center"

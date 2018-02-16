@@ -14,11 +14,8 @@ const sections = [
   { data: [], title: "Charts" },
   {
     data: [
-      {
-        key: "ContainersView",
-        title: "Cursor, Brush, Selection, Zoom, Voronoi"
-      },
-      { key: "CreateContainerView", title: "createContainer()" }
+      { key: "ContainersView", title: "Built–in Containers" },
+      { key: "CreateContainerView", title: "Custom Containers" }
     ],
     title: "Containers"
   },

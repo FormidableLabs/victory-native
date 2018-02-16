@@ -18,7 +18,7 @@ import { round } from "lodash";
 
 export default class extends React.Component {
   static navigationOptions = {
-    headerTitle: "Containers"
+    headerTitle: "Built–in Containers"
   };
 
   state = {
@@ -34,7 +34,9 @@ export default class extends React.Component {
         contentContainerStyle={viewStyles.contentContainer}
         scrollEnabled={this.state.scrollEnabled}
       >
-        <Text style={viewStyles.header}>{"VictoryCursorContainer"}</Text>
+        <Text style={[viewStyles.header, viewStyles.monospace]}>
+          {"VictoryCursorContainer"}
+        </Text>
         <VictoryChart
           containerComponent={
             <VictoryCursorContainer
@@ -48,7 +50,9 @@ export default class extends React.Component {
           <VictoryBar />
         </VictoryChart>
 
-        <Text style={viewStyles.header}>{"VictoryBrushContainer"}</Text>
+        <Text style={[viewStyles.header, viewStyles.monospace]}>
+          {"VictoryBrushContainer"}
+        </Text>
         <VictoryChart
           containerComponent={
             <VictoryBrushContainer
@@ -61,7 +65,9 @@ export default class extends React.Component {
           <VictoryBar />
         </VictoryChart>
 
-        <Text style={viewStyles.header}>{"VictorySelectionContainer"}</Text>
+        <Text style={[viewStyles.header, viewStyles.monospace]}>
+          {"VictorySelectionContainer"}
+        </Text>
         <VictoryChart
           containerComponent={
             <VictorySelectionContainer
@@ -78,7 +84,9 @@ export default class extends React.Component {
           />
         </VictoryChart>
 
-        <Text style={viewStyles.header}>{"VictoryZoomContainer"}</Text>
+        <Text style={[viewStyles.header, viewStyles.monospace]}>
+          {"VictoryZoomContainer"}
+        </Text>
         <VictoryChart
           containerComponent={
             <VictoryZoomContainer
@@ -90,7 +98,9 @@ export default class extends React.Component {
           <VictoryBar />
         </VictoryChart>
 
-        <Text style={viewStyles.header}>{"VictoryVoronoiContainer"}</Text>
+        <Text style={[viewStyles.header, viewStyles.monospace]}>
+          {"VictoryVoronoiContainer"}
+        </Text>
         <VictoryChart
           containerComponent={
             <VictoryVoronoiContainer
