@@ -12,7 +12,15 @@ import ChevronIcon from "../components/chevron";
 
 const sections = [
   { data: [], title: "Charts" },
-  { data: [], title: "Containers" },
+  {
+    data: [
+      {
+        key: "ContainersView",
+        title: "Cursor, Brush, Selection, Zoom, Voronoi"
+      }
+    ],
+    title: "Containers"
+  },
   {
     data: [
       { key: "LegendsView", title: "Legends" },

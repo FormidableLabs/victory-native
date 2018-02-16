@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollView, Dimensions } from "react-native";
 import { VictoryLegend } from "victory-native";
 import Svg from "react-native-svg";
+import viewStyles from "../styles/view-styles";
 
 const legendData = [
   {
@@ -62,7 +63,7 @@ export default class extends React.Component {
 
   render() {
     return (
-      <ScrollView style={{ flex: 1 }}>
+      <ScrollView style={viewStyles.container}>
         <Svg width={Dimensions.get("window").width} height={300}>
           <VictoryLegend
             x={5}
