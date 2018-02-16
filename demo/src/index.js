@@ -5,14 +5,26 @@ import LegendsView from "./views/legends-view";
 import AxisView from "./views/axis-view";
 import ContainersView from "./views/containers-view";
 import CreateContainerView from "./views/create-container-view";
+import ErrorsTooltipsView from "./views/errors-tooltips-view";
+import AreaView from "./views/area-view";
+import PieView from "./views/pie-view";
+import BarView from "./views/bar-view";
+import ChartView from "./views/chart-view";
+import LineView from "./views/line-view";
 
 export default stackNavigator(
   {
     ComponentsView: { screen: ComponentsView },
+    AreaView: { screen: AreaView },
+    PieView: { screen: PieView },
+    BarView: { screen: BarView },
+    ChartView: { screen: ChartView },
+    LineView: { screen: LineView },
     ContainersView: { screen: ContainersView },
     CreateContainerView: { screen: CreateContainerView },
     LegendsView: { screen: LegendsView },
-    AxisView: { screen: AxisView }
+    AxisView: { screen: AxisView },
+    ErrorsTooltipsView: { screen: ErrorsTooltipsView }
   },
   {
     navigationOptions: {

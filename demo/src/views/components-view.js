@@ -11,7 +11,16 @@ import styles from "../styles/container-view-styles";
 import ChevronIcon from "../components/chevron";
 
 const sections = [
-  { data: [], title: "Charts" },
+  {
+    data: [
+      { key: "PieView", title: "VictoryPie" },
+      { key: "ChartView", title: "VictoryChart" },
+      { key: "LineView", title: "VictoryLine" },
+      { key: "AreaView", title: "VictoryArea" },
+      { key: "BarView", title: "VictoryBar" }
+    ],
+    title: "Charts"
+  },
   {
     data: [
       { key: "ContainersView", title: "Built–in Containers" },
@@ -22,7 +31,8 @@ const sections = [
   {
     data: [
       { key: "LegendsView", title: "Legends" },
-      { key: "AxisView", title: "Axis" }
+      { key: "AxisView", title: "Axis" },
+      { key: "ErrorsTooltipsView", title: "Errors & Tooltips" }
     ],
     title: "Other"
   }
