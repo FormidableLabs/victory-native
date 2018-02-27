@@ -11,6 +11,7 @@ import PieView from "./views/pie-view";
 import BarView from "./views/bar-view";
 import ChartView from "./views/chart-view";
 import LineView from "./views/line-view";
+import ScatterView from "./views/scatter-view";
 
 export default stackNavigator(
   {
@@ -20,6 +21,7 @@ export default stackNavigator(
     BarView: { screen: BarView },
     ChartView: { screen: ChartView },
     LineView: { screen: LineView },
+    ScatterView: { screen: ScatterView },
     ContainersView: { screen: ContainersView },
     CreateContainerView: { screen: CreateContainerView },
     LegendsView: { screen: LegendsView },
