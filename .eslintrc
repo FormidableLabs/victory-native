@@ -5,6 +5,9 @@
 "rules":
   "react/jsx-pascal-case": 0
   "no-magic-numbers": 0
+  "arrow-parens": 0
+  "no-use-before-define": 0
+  "no-invalid-this": 0
   # Don't check victory deps until bugfix for NODE_PATH uptream.
   # https://github.com/benmosher/eslint-plugin-import/issues/142
   "import/no-unresolved": [2, { ignore: ["^(builder-|)victory"] }]
