@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.17.2 (2018-03-14)
+
+-[277](https://github.com/FormidableLabs/victory-native/pull/277) Fixes a naming bug in `VictoryZoomContainer`
+
 ## 0.17.1 (2018-02-12)
 
 -[258](https://github.com/FormidableLabs/victory-native/pull/258) Support `disable` prop on container components
