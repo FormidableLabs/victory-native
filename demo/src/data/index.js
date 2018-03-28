@@ -3,6 +3,9 @@ import { range, random } from "lodash";
 export const getData = () =>
   range(1, 10).map(i => ({ x: i, y: random(1, 10) }));
 
+export const getBoxPlotData = () =>
+  range(5).map((i) => ({ x: i, y: range(20).map(() => random(1, 100)) }));
+
 export const generateRandomData = (points = 6) =>
   range(1, points + 1).map(i => ({ x: i, y: i + random(-1, 2) }));
 
