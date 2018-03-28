@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.17.3 (2018-03-28)
+
+-[289](https://github.com/FormidableLabs/victory-native/pull/289) Add `VictoryBoxPlot`
+
 ## 0.17.2 (2018-03-14)
 
 -[277](https://github.com/FormidableLabs/victory-native/pull/277) Fixes a naming bug in `VictoryZoomContainer`
