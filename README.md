@@ -47,8 +47,8 @@ export default App;
 **Note:** `react-native-svg` has strict version requirements for both `react` and `react-native`. Please match versions to those required by `react-native-svg`. See the up-to-date requirements on the [react-native-svg Readme][react-native-svg-readme].
 We encourage you to use the latest version of `react-native-svg` possible for your project, as `victory-native` issues are frequently solved by `react-native-svg` bugfixes.
 
-* `victory-native@~0.17.0` requires `react-native-svg@^6.1.0` or `react-native-svg@6.0.1-rc.1`
-* `victory-native@~0.16.2` requires `react-native-svg@^6.1.0` or `react-native-svg@6.0.1-rc.1`
+* `victory-native@~0.17.0` requires `react-native-svg@~6.1.0` or `react-native-svg@6.0.1-rc.1`
+* `victory-native@~0.16.2` requires `react-native-svg@~6.1.0` or `react-native-svg@6.0.1-rc.1`
 * ~~`victory-native@~0.16.0` requires `react-native-svg@6.0.0`~~ No longer supported
 * ~~`victory-native@~0.15.0` requires `react-native-svg@^5.0.0`~~ No longer supported
 

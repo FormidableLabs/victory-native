@@ -13,7 +13,7 @@ export default class extends React.Component {
       <ScrollView style={viewStyles.container}>
         <VictoryBar />
 
-        <VictoryBar
+        <VictoryBar polar
           data={[
             { x: 1, y: 1 },
             { x: 2, y: 2 },

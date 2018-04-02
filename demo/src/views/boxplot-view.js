@@ -1,3 +1,4 @@
+/*global setInterval*/
 import React from "react";
 import { ScrollView } from "react-native";
 import { VictoryChart, VictoryBoxPlot } from "victory-native";
@@ -10,9 +11,22 @@ export default class extends React.Component {
     headerTitle: "VictoryBoxPlot"
   };
 
-  state = {
-    data: getBoxPlotData()
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: getBoxPlotData()
+    };
+  }
+
+  componentDidMount() {
+    setInterval(this.updateDemoData.bind(this), 3000);
+  }
+
+  updateDemoData() {
+    this.setState({
+      data: getBoxPlotData()
+    });
+  }
 
   render() {
     return (
