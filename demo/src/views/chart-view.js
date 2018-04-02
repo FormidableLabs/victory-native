@@ -1,3 +1,4 @@
+/*global setInterval*/
 import React from "react";
 import { ScrollView } from "react-native";
 import {
@@ -8,7 +9,8 @@ import {
   VictoryLine,
   VictoryScatter,
   VictoryArea,
-  VictoryStack
+  VictoryStack,
+  VictoryTooltip
 } from "victory-native";
 import viewStyles from "../styles/view-styles";
 import { getTransitionData } from "../data";
@@ -29,9 +31,22 @@ export default class extends React.Component {
     headerTitle: "VictoryChart"
   };
 
-  state = {
-    transitionData: getTransitionData()
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      transitionData: getTransitionData()
+    };
+  }
+
+  componentDidMount() {
+    setInterval(this.updateDemoData.bind(this), 3000);
+  }
+
+  updateDemoData() {
+    this.setState({
+      transitionData: getTransitionData()
+    });
+  }
 
   render() {
     return (
@@ -65,6 +80,7 @@ export default class extends React.Component {
 
         <VictoryChart>
           <VictoryScatter
+            labelComponent={<VictoryTooltip/>}
             data={[
               {
                 x: 1,
@@ -106,6 +122,11 @@ export default class extends React.Component {
                 label: "Black"
               }
             ]}
+          />
+        </VictoryChart>
+        <VictoryChart animate={{ duration: 2000 }}>
+          <VictoryArea
+            data={this.state.transitionData}
           />
         </VictoryChart>
         <VictoryChart animate={{ duration: 2000 }}>

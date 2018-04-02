@@ -1,3 +1,4 @@
+/*global setInterval*/
 import React from "react";
 import { ScrollView } from "react-native";
 import { VictoryArea, VictoryGroup, VictoryStack } from "victory-native";
@@ -9,16 +10,29 @@ export default class extends React.Component {
     headerTitle: "VictoryArea"
   };
 
-  state = {
-    data: getData()
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: getData()
+    };
+  }
+
+  componentDidMount() {
+    setInterval(this.updateDemoData.bind(this), 3000);
+  }
+
+  updateDemoData() {
+    this.setState({
+      data: getData()
+    });
+  }
 
   render() {
     return (
       <ScrollView style={viewStyles.container}>
-        <VictoryArea />
+        <VictoryArea/>
 
-        <VictoryArea
+        <VictoryArea polar
           data={[
             { x: 1, y: 1 },
             { x: 2, y: 2 },

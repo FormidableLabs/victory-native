@@ -1,3 +1,4 @@
+/*global setInterval*/
 import React from "react";
 import { ScrollView } from "react-native";
 import { VictoryPie } from "victory-native";
@@ -9,9 +10,22 @@ export default class extends React.Component {
     headerTitle: "VictoryPie"
   };
 
-  state = {
-    randomData: generateRandomData()
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      randomData: generateRandomData()
+    };
+  }
+
+  componentDidMount() {
+    setInterval(this.updateDemoData.bind(this), 3000);
+  }
+
+  updateDemoData() {
+    this.setState({
+      randomData: generateRandomData()
+    });
+  }
 
   render() {
     return (

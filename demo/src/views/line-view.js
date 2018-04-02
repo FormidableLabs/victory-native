@@ -1,3 +1,4 @@
+/*global setInterval*/
 import React from "react";
 import { ScrollView } from "react-native";
 import { VictoryLine } from "victory-native";
@@ -9,17 +10,31 @@ export default class extends React.Component {
     headerTitle: "VictoryLine"
   };
 
-  state = {
-    y: getYFunction(),
-    styles: getStyles()
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      y: getYFunction(),
+      styles: getStyles()
+    };
+  }
+
+  componentDidMount() {
+    setInterval(this.updateDemoData.bind(this), 3000);
+  }
+
+  updateDemoData() {
+    this.setState({
+      y: getYFunction(),
+      styles: getStyles()
+    });
+  }
 
   render() {
     return (
       <ScrollView style={viewStyles.container}>
         <VictoryLine />
 
-        <VictoryLine
+        <VictoryLine polar
           data={[
             { x: 0, y: 1 },
             { x: 1, y: 3 },
