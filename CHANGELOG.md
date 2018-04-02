@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.17.4 (2018-04-01)
+
+-[292](https://github.com/FormidableLabs/victory-native/pull/292) Fixes a bug with polar line and area chart rendering
+
 ## 0.17.3 (2018-03-28)
 
 -[289](https://github.com/FormidableLabs/victory-native/pull/289) Add `VictoryBoxPlot`
