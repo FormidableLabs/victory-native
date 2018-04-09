@@ -17,7 +17,8 @@ Link react-native:
 ```sh
 $ react-native link react-native-svg
 ```
-** `victory-native@~0.17.0` requires `react-native-svg@6.1.x`**
+**`victory-native@~0.17.0` requires `react-native-svg@6.1.x`**
+
 **Please see [Peer Dependencies and Version Requirements](#peer-dependencies-and-version-requirements) for requirements for previous versions of `victory-native`**
 
 
