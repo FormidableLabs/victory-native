@@ -3,7 +3,7 @@ import { NativeHelpers } from "../../lib";
 
 describe("getStyle", () => {
   it("should return undefined if not called with any arguments", () => {
-    expect(NativeHelpers.getStyle()).to.be.undefined;
+    expect(NativeHelpers.getStyle()).to.equal(undefined);
   });
 
   it("removes all unsupported props and leaves others, including stroke props", () => {
