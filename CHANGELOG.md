@@ -1,5 +1,51 @@
 # VictoryNative Changelog
 
+## 0.18.0 (2018-06-06)
+
+**Breaking Changes**
+- Refactors utility methods. This is an internal breaking change, but should not be a breaking change for most Victory users. See [victory-core/380](https://github.com/FormidableLabs/victory-core/pull/380) for details
+
+- Upgrades to `react-fast-compare@^2.0.0` which changes function comparison. This means that Victory components _will_ update when functions are not equal. This closes several Victory issues, but may cause a slight performance decline
+
+- Disable arbitrary styles from data
+This change deprecates Victory's ability to automatically pick up style attributes from the data object. This change will improve performance, but will be a breaking change for many users. Fortunately the upgrade path is simple:
+
+If your data object looks like
+```
+data={[
+  { x: 1, y: 1, fill: "red", opacity: 0.2 },
+  ...
+]}
+```
+Add the following functional styles:
+```
+style={{ data:  { fill: (d) => d.fill, opacity: (d) => d.opacity } }}
+```
+and everything will work as before.
+
+- Limit Pre-calculating label props
+Base props for labels will no longer be pre-calculated unless a labels prop exists. This change improves performance, but it will be a breaking change for users who were using events for adding labels to elements that did not already have them using an event mutation like:
+
+```
+events={[{
+  target: "data",
+  eventHandlers: {
+    onClick: () => {
+      return [{ target: "labels", mutation: () => ({ text: "clicked" }) }];
+    }
+  }
+}]}
+```
+If you are using this pattern, you can make labels work as expected by adding a dummy labels prop like: `labels={() => null}`
+
+Note: This change _does not_ affect tooltips, which exist, but are invisible until they receive the `active` prop
+
+**New Features**
+- Adds `minDomain` and `maxDomain` props. These props may be used to set one edge of a domain while allowing the other edge to be determined by data or other props. `minDomain` and `maxDomain` override `domainPadding`.
+- Adds `singleQuadrantDomainPadding` prop. This prop may be given as a boolean or an object with boolean values for x and y. When this prop is set to `false` for a given dimension, any `domainPadding` applied in that dimension will _not_ be constrained to existing quadrants.
+- Support top and bottom cornerRadius for bars. Support functional cornerRadius
+`defaultBrushArea` prop with supported options "all", "none" and "disable"
+
 ## 0.17.4 (2018-04-01)
 
 -[292](https://github.com/FormidableLabs/victory-native/pull/292) Fixes a bug with polar line and area chart rendering
