@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 0.18.1 (2018-06-13)
+
+-[322](https://github.com/FormidableLabs/victory-native/pull/322) Use `Dimension.get("window").width` to set the default `width` and `height` for `VictoryPie`
+
 ## 0.18.0 (2018-06-06)
 
 **Breaking Changes**
