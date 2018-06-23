@@ -1,5 +1,16 @@
 # VictoryNative Changelog
 
+# 0.18.2 (2018-06-22)
+
+VictoryCore
+-[390](https://github.com/FormidableLabs/victory-core/pull/390) *Breaking Change for other Victory packages*
+This PR changes how the exported helper `reduceChildren` operates, and removes `getDomainFromGroupedData`
+-[392](https://github.com/FormidableLabs/victory-core/pull/392) Make sure transforms are applied to primitive components
+
+VictoryChart
+-[555](https://github.com/FormidableLabs/victory-chart/pull/555) Refactors how `VictoryStack` and `VictoryGroup` interact with child data. Fixes bugs related to stacked and grouped charts in `VictoryVoronoiContainer`
+
+
 ## 0.18.1 (2018-06-13)
 
 -[322](https://github.com/FormidableLabs/victory-native/pull/322) Use `Dimension.get("window").width` to set the default `width` and `height` for `VictoryPie`
