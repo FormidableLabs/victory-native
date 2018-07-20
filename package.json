@@ -25,12 +25,12 @@
     "test": "mocha --compilers test/compiler.js --recursive test/spec/*.js"
   },
   "devDependencies": {
+    "@babel/core": "7.0.0-beta.44",
+    "@babel/register": "7.0.0-beta.44",
     "@jonny/react-native-mock": "0.4.0",
-    "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
     "babel-plugin-module-resolver": "^2.5.0",
     "babel-preset-react-native": "^1.9.0",
-    "babel-register": "^6.11.6",
     "chai": "^3.5.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
