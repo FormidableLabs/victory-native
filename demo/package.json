@@ -4,15 +4,15 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
-    "react": "16.2.0",
-    "react-native": "0.53.0",
+    "react": "16.4.0",
+    "react-native": "0.56.0",
     "react-native-svg": "6.2.1",
     "react-navigation": "^1.0.3",
     "victory-native": "*"
   },
   "devDependencies": {
     "babel-jest": "22.2.2",
-    "babel-preset-react-native": "4.0.0",
+    "babel-preset-react-native": "5.0.2",
     "jest": "22.3.0",
     "react-test-renderer": "^16.2.0"
   },
