@@ -2,6 +2,7 @@
 var fs = require("fs");
 var babel = require("babel-core");
 var origJs = require.extensions[".js"];
+var metroPreset = require("metro-react-native-babel-preset");
 
 // Mock react-native and react-native-svg
 require("@jonny/react-native-mock/mock");
@@ -11,7 +12,9 @@ require("react-native-svg-mock/mock");
 var compile = function (fileName) {
   var src = fs.readFileSync(fileName, "utf8");
   var output = babel.transform(src, {
-    filename: fileName
+    filename: fileName,
+    babelrc: false,
+    presets: [metroPreset]
   }).code;
   return output;
 }
