@@ -25,12 +25,12 @@
     "test": "mocha --compilers test/compiler.js --recursive test/spec/*.js"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.44",
-    "@babel/register": "7.0.0-beta.44",
+    "@babel/core": "7.0.0-beta.47",
+    "@babel/register": "7.0.0-beta.47",
     "@jonny/react-native-mock": "0.4.0",
     "babel-eslint": "^6.1.2",
     "babel-plugin-module-resolver": "^2.5.0",
-    "babel-preset-react-native": "^1.9.0",
+    "babel-preset-react-native": "^5.0.2",
     "chai": "^3.5.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
@@ -39,14 +39,15 @@
     "eslint-plugin-filenames": "^1.2.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.10.3",
+    "metro-bundler": "^0.22.1",
     "mocha": "^5.0.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-native": "~0.51.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-native": "~0.56.0",
     "react-native-svg": "^6.1.4",
     "react-native-svg-mock": "^2.0.0",
     "react-navigation": "^1.0.3",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.4.0"
   },
   "dependencies": {
     "lodash": "^4.17.5",
