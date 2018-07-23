@@ -1,6 +1,17 @@
 # VictoryNative Changelog
 
-# 0.18.2 (2018-06-22)
+## 30.0.0 (2018-07-23)
+
+- Updates all `victory-*` dependencies to use `30.0.0` versions, including new, more modular packages.
+Please see [Victory's Changelog](https://github.com/FormidableLabs/victory/blob/master/CHANGELOG.md#3000-2018-07-17) for details, and [this blog post](https://formidable.com/blog/2018/victory-is-turning-thirty/) for versioning rationale
+- Upgrades `victory-native` for compatibility with `react-native@0.56.0`
+
+Associated Pull Requests:
+-[347](https://github.com/FormidableLabs/victory-native/pull/347) updates test and demo infrastructure to work with `react-native@0.56.0`
+-[346](https://github.com/FormidableLabs/victory-native/pull/346) refactors and simplifies native container mixins, and enforces consistency for imports
+-[343](https://github.com/FormidableLabs/victory-native/pull/343) updates all `victory-*` dependencies and updates infrastructure to babel 7
+
+## 0.18.2 (2018-06-22)
 
 VictoryCore
 -[390](https://github.com/FormidableLabs/victory-core/pull/390) *Breaking Change for other Victory packages*
