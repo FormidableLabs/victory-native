@@ -6,7 +6,7 @@
     "prop-types": "^15.6.0",
     "react": "16.4.0",
     "react-native": "0.56.0",
-    "react-native-svg": "6.2.1",
+    "react-native-svg": "6.5.0",
     "react-navigation": "^1.0.3",
     "victory-native": "*"
   },
