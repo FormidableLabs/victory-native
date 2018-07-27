@@ -46,7 +46,7 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-native": "~0.56.0",
-    "react-native-svg": "^6.1.4",
+    "react-native-svg": "^6.5.0",
     "react-native-svg-mock": "^2.0.0",
     "react-navigation": "^1.0.3",
     "react-test-renderer": "^16.4.0"
