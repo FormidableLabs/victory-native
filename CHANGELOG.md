@@ -1,5 +1,11 @@
 # VictoryNative Changelog
 
+## 30.1.0 (2018-07-27)
+
+-[354](https://github.com/FormidableLabs/victory-native/pull/354)
+  - Updates Victory dependencies to `30.1.0`
+  - Supports `react-native-svg^6.5.0`
+
 ## 30.0.0 (2018-07-23)
 
 - Updates all `victory-*` dependencies to use `30.0.0` versions, including new, more modular packages.
