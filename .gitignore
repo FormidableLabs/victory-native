@@ -31,4 +31,4 @@ node_modules/
 npm-debug.log*
 
 # yarn
-yarn.lock
+package-lock.json
