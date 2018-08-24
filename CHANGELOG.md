@@ -1,5 +1,14 @@
 # VictoryNative Changelog
 
+## 30.3.0 (2018-08-24)
+
+- [victory/#1088](https://github.com/FormidableLabs/victory/pull/1088) - Bugfix: don’t ignore angle: 0 for text styles
+- [victory/#1091](https://github.com/FormidableLabs/victory/pull/1091) - Fix inconsistent defaultBrushArea behavior. Thanks @bees
+- [victory/#1093](https://github.com/FormidableLabs/victory/pull/1093) - Remove trailing whitespace and incorrect zeroes in transform strings
+- [victory/#1094](https://github.com/FormidableLabs/victory/pull/1094) - Support  direction prop for VictoryLabel and Text primitive
+- [victory/#1096](https://github.com/FormidableLabs/victory/pull/1096) - Fix bug in horizontal zooming and panning
+- [victory/#1101](https://github.com/FormidableLabs/victory/pull/1101) - Fix arguments in `VictoryVoronoiContainer` label function. Thanks @evsheino
+
 ## 30.1.0 (2018-07-27)
 
 -[354](https://github.com/FormidableLabs/victory-native/pull/354)
