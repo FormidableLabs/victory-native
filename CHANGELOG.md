@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 30.4.0 (2018-08-24)
+
+-[378](https://github.com/FormidableLabs/victory-native/pull/378) - Adds `disableContainerEvents` prop for all native container components
+
 ## 30.3.0 (2018-08-24)
 
 - [victory/#1088](https://github.com/FormidableLabs/victory/pull/1088) - Bugfix: don’t ignore angle: 0 for text styles
