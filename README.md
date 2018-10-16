@@ -1,4 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/FormidableLabs/victory-native.png?label=ready&title=Ready)](https://waffle.io/FormidableLabs/victory-native)
 # Victory Native
 
 ### Usage
