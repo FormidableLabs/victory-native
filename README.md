@@ -82,12 +82,6 @@ Do **not** run `npm install` in the `demo/` directory, or the packager packager 
 
 See the docs and examples on the website https://formidable.com/open-source/victory/docs/native
 
-## _IMPORTANT_
-
-This project is in a pre-release state. We're hard at work fixing bugs and improving the API. Be prepared for breaking changes!
-
-**SEMVER** Minor version bumps should be considered breaking changes until we hit v1.0.0. Patches can be considered safe.
-
 ## Contributor Covenant Code of Conduct
 
 Please review our [Code of Conduct][code] before contributing.
