@@ -65,7 +65,7 @@
     "victory-chart": "^30.3.0",
     "victory-core": "^30.3.0",
     "victory-create-container": "^30.3.0",
-    "victory-cursor-container": "^30.3.0",
+    "victory-cursor-container": "^30.5.1",
     "victory-errorbar": "^30.3.0",
     "victory-group": "^30.3.0",
     "victory-legend": "^30.3.0",
