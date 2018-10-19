@@ -1,5 +1,10 @@
 # VictoryNative Changelog
 
+## 30.5.0 (2018-08-24)
+
+- [394](https://github.com/FormidableLabs/victory-native/pull/394) - Correctly clears cursors when `onTouchEnd` is triggered. Thanks @svenlombaert!
+- [393](https://github.com/FormidableLabs/victory-native/pull/393) - Correct reexports for all `victory` components
+
 ## 30.4.0 (2018-08-24)
 
 -[378](https://github.com/FormidableLabs/victory-native/pull/378) - Adds `disableContainerEvents` prop for all native container components
