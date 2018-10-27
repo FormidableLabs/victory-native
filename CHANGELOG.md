@@ -1,9 +1,17 @@
 # VictoryNative Changelog
 
+## 30.6.0 (2018-10-27)
+
+- [#399](https://github.com/FormidableLabs/victory-native/pull/399) - Activate cursor `onTouchStart`
+
+- [victory/#1158](https://github.com/FormidableLabs/victory/pull/1158) `cornerRadius` improvements for `VictoryBar`
+  - Artifacts caused by `cornerRadius` values larger than the height of the bar have been corrected
+  - `cornerRadius` now supports `topLeft`, `topRight`, `bottomLeft` and `bottomRight` values in addition to existing values. This is not a breaking change. These values may be used alongside existing values for `top` and `bottom`, but more specific values will override less specific values.
+
 ## 30.5.0 (2018-10-19)
 
-- [394](https://github.com/FormidableLabs/victory-native/pull/394) - Correctly clears cursors when `onTouchEnd` is triggered. Thanks @svenlombaert!
-- [393](https://github.com/FormidableLabs/victory-native/pull/393) - Correct reexports for all `victory` components
+- [#394](https://github.com/FormidableLabs/victory-native/pull/394) - Correctly clears cursors when `onTouchEnd` is triggered. Thanks @svenlombaert!
+- [#393](https://github.com/FormidableLabs/victory-native/pull/393) - Correct reexports for all `victory` components
 
 ## 30.4.0 (2018-08-24)
 
