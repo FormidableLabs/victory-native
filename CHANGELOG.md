@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 32.0.0 (2019-03-15)
+
+- Updates to `victory@32.0.0`. Changes described here: https://github.com/FormidableLabs/victory/blob/master/CHANGELOG.md#3200-2019-02-27
+
 ## 31.0.0 (2018-11-10)
 
 - [victory/1177](https://github.com/FormidableLabs/victory/pull/1177) Adds support for controlling `radius`, `innerRadius`, `cornerRadius`, `padAngle`, `sliceStartAngle` and `sliceEndAngle` for each individual slice of a pie:
