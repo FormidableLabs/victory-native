@@ -52,7 +52,7 @@
     "react-test-renderer": "^16.4.0"
   },
   "dependencies": {
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.11",
     "prop-types": "^15.5.10",
     "react-fast-compare": "^2.0.0",
     "victory-area": "^32.0.0",
