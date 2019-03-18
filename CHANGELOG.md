@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 32.0.1 (2019-05-18)
+
+- [#450](https://github.com/FormidableLabs/victory-native/pull/450)updates lodash to fix a security vulnerability
+
 ## 32.0.0 (2019-03-15)
 
 - Updates to `victory@32.0.0`. Changes described here: https://github.com/FormidableLabs/victory/blob/master/CHANGELOG.md#3200-2019-02-27
