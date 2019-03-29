@@ -60,22 +60,17 @@ If you'd like to contribute to `victory-native`, you can use the local demo app 
 
 ```sh
 # Install
-$ npm install -g react-native-cli # if you haven't already
 $ git clone https://github.com/FormidableLabs/victory-native
 $ cd victory-native
 $ npm install
-
-# Start the react-native packager in a terminal that will remain running
-$ npm start
+$ cd demo
+$ npm install
 
 # Run the demo from a new terminal window
-$ npm run demo:ios
+$ npx react-native run-ios
 ```
 
 Changes to `lib` will be reflected in the demo app.
-
-Do **not** run `npm install` in the `demo/` directory, or the packager packager will crash due to
-"duplicate @providesModule declarations" found in `node_modules/` and `demo/node_modules`.
 
 ### Documentation
 
