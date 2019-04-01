@@ -49,22 +49,23 @@ export default App;
 **Note:** `react-native-svg` has strict version requirements for both `react` and `react-native`. Please match versions to those required by `react-native-svg`. See the up-to-date requirements on the [react-native-svg Readme][react-native-svg-readme].
 We encourage you to use the latest version of `react-native-svg` possible for your project, as `victory-native` issues are frequently solved by `react-native-svg` bugfixes.
 
-* `victory-native@^30.0.0` requires `react-native-svg@6.1.x` or `react-native-svg@^6.5.0`
+* `victory-native@^30.0.0` requires `react-native-svg@6.1.x`  or `react-native-svg@^6.5.0`and above
 * `victory-native@^0.16.2` requires `react-native-svg@6.1.x` or `react-native-svg@^6.5.0`
 * ~~`victory-native@~0.16.0` requires `react-native-svg@6.0.0`~~ No longer supported
 * ~~`victory-native@~0.15.0` requires `react-native-svg@^5.0.0`~~ No longer supported
 
 ### Local Development and Demo
 
-If you'd like to contribute to `victory-native`, you can use the local demo app to test your changes on the iOS simulator. (But if you're just getting started with `victory-native` and want to see a demo, we recommend using [victory-native-demo][victory-native-demo], as it supports Android and is simpler to set up.)
+If you'd like to contribute to `victory-native`, you can use the local demo app to test your changes on the iOS simulator.
 
 ```sh
 # Install
 $ git clone https://github.com/FormidableLabs/victory-native
 $ cd victory-native
-$ npm install
+$ yarn install
 $ cd demo
-$ npm install
+$ yarn install
+$ yarn start
 
 # Run the demo from a new terminal window
 $ npx react-native run-ios

@@ -1,4 +1,4 @@
-import { createAppContainer, createStackNavigator } from "react-navigation";
+import { StackNavigator as stackNavigator } from "react-navigation";
 import ComponentsView from "./views/components-view";
 
 import LegendsView from "./views/legends-view";
@@ -14,7 +14,7 @@ import LineView from "./views/line-view";
 import ScatterView from "./views/scatter-view";
 import BoxPlotView from "./views/boxplot-view";
 
-const StackNavigator = createStackNavigator(
+export default stackNavigator(
   {
     ComponentsView: { screen: ComponentsView },
     AreaView: { screen: AreaView },
@@ -38,5 +38,3 @@ const StackNavigator = createStackNavigator(
     }
   }
 );
-
-export default createAppContainer(StackNavigator);

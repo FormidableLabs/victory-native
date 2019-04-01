@@ -19,8 +19,6 @@
   },
   "homepage": "https://github.com/FormidableLabs/victory-native#readme",
   "scripts": {
-    "start": "./node_modules/react-native/scripts/packager.sh start --reset-cache",
-    "demo:ios": "react-native run-ios --project-path demo/ios",
     "lint": "eslint test/spec/**/*.js lib/**/*.js demo/**/*.js",
     "test": "mocha --compilers test/compiler.js --recursive test/spec/*.js"
   },
@@ -44,11 +42,9 @@
     "metro-react-native-babel-preset": "^0.42.2",
     "mocha": "^5.0.0",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-native": "~0.56.0",
+    "react-native": "~0.59.0",
     "react-native-svg": "^8.0.10",
     "react-native-svg-mock": "^2.0.0",
-    "react-navigation": "^1.0.3",
     "react-test-renderer": "^16.4.0"
   },
   "dependencies": {
