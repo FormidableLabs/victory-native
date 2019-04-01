@@ -1,6 +1,12 @@
 # VictoryNative Changelog
 
-## 32.0.1 (2019-05-18)
+## 32.0.2 (2019-04-01)
+
+- [#451](https://github.com/FormidableLabs/victory-native/pull/451) Updates the demo to use `react-native@~0.59.0`. Thanks @ratson
+- [#452](https://github.com/FormidableLabs/victory-native/pull/452) Fixes crashes with react-native-svg v7.0.0 - v9.2.3. Thanks @msand
+- [#456](https://github.com/FormidableLabs/victory-native/pull/456) Adds a work around for a clipPath caching issue
+
+## 32.0.1 (2019-03-18)
 
 - [#450](https://github.com/FormidableLabs/victory-native/pull/450)updates lodash to fix a security vulnerability
 
