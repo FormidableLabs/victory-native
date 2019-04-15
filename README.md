@@ -1,8 +1,6 @@
 # Victory Native
 
-### Maintenance Status: Active
-
-Formidable is actively working on this project, and we expect to continue for work for the foreseeable future. Bug reports, feature requests and pull requests are welcome.
+[![Maintenance Status][maintenance-image]](#maintenance-status)
 
 ### Usage
 
@@ -85,6 +83,14 @@ See the docs and examples on the website https://formidable.com/open-source/vict
 
 Please review our [Code of Conduct][code] before contributing.
 
+
+### Maintenance Status
+
+**Active:** Formidable is actively working on this project, and we expect to continue for work for the foreseeable future. Bug reports, feature requests and pull requests are welcome.
+
+
 [code]: https://github.com/FormidableLabs/builder-victory-component/blob/master/CONTRIBUTING.md#contributor-covenant-code-of-conduct
 [victory-native-demo]:https://github.com/FormidableLabs/victory-native-demo
 [react-native-svg-readme]: https://github.com/react-native-community/react-native-svg#notice
+[maintenance-image]: https://img.shields.io/badge/maintenance-active-green.svg
+
