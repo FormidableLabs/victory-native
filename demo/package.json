@@ -4,8 +4,8 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
-    "react": "16.8.5",
-    "react-native": "0.59.2",
+    "react": "16.8.6",
+    "react-native": "0.60.0",
     "react-native-gesture-handler": "^1.1.0",
     "react-native-svg": "9.3.6",
     "react-navigation": "^1.0.0",
