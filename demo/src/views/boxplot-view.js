@@ -1,39 +1,29 @@
-/*global setInterval*/
+/*global setInterval clearInterval*/
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { VictoryChart, VictoryBoxPlot } from "victory-native";
 import viewStyles from "../styles/view-styles";
 import { getBoxPlotData } from "../data";
 
+export default function BoxPlotView() {
+  const [data, setData] = React.useState(getBoxPlotData());
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "VictoryBoxPlot"
-  };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: getBoxPlotData()
+  React.useEffect(() => {
+    const updateDataHandle = setInterval(() => {
+      setData(getBoxPlotData());
+    }, 3000);
+    return () => {
+      clearInterval(updateDataHandle);
     };
-  }
+  }, []);
 
-  componentDidMount() {
-    setInterval(this.updateDemoData.bind(this), 3000);
-  }
-
-  updateDemoData() {
-    this.setState({
-      data: getBoxPlotData()
-    });
-  }
-
-  render() {
-    return (
-      <ScrollView style={viewStyles.container}>
+  return (
+    <ScrollView style={viewStyles.container}>
+      <View pointerEvents="none">
         <VictoryChart domainPadding={50}>
           <VictoryBoxPlot
-            minLabels maxLabels
+            minLabels
+            maxLabels
             boxWidth={10}
             data={[
               { x: "red", y: [5, 10, 9, 2] },
@@ -57,12 +47,12 @@ export default class extends React.Component {
             ]}
           />
         </VictoryChart>
-        <VictoryBoxPlot
-          animate
-          boxWidth={10}
-          data={this.state.data}
-        />
-      </ScrollView>
-    );
-  }
+        <VictoryBoxPlot animate boxWidth={10} data={data} />
+      </View>
+    </ScrollView>
+  );
 }
+
+BoxPlotView.navigationOptions = {
+  headerTitle: "VictoryBoxPlot"
+};

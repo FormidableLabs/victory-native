@@ -1,38 +1,30 @@
-/*global setInterval*/
+/*global setInterval clearInterval*/
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { VictoryScatter } from "victory-native";
 import viewStyles from "../styles/view-styles";
 import { generateRandomData } from "../data";
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "VictoryScatter"
-  };
+export default function ScatterView() {
+  const [data, setData] = React.useState(generateRandomData());
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      randomData: generateRandomData()
+  React.useEffect(() => {
+    const updateDataHandle = setInterval(() => {
+      setData(generateRandomData());
+    }, 3000);
+    return () => {
+      clearInterval(updateDataHandle);
     };
-  }
+  }, []);
 
-  componentDidMount() {
-    setInterval(this.updateDemoData.bind(this), 3000);
-  }
-
-  updateDemoData() {
-    this.setState({
-      randomData: generateRandomData()
-    });
-  }
-
-  render() {
-    return (
-      <ScrollView style={viewStyles.container}>
+  return (
+    <ScrollView style={viewStyles.container}>
+      <View pointerEvents="none">
         <VictoryScatter />
 
-        <VictoryScatter y={data => Math.sin(2 * Math.PI * data.x)} />
+        <VictoryScatter data={data} animate={{ duration: 1500 }} />
+
+        <VictoryScatter y={d => Math.sin(2 * Math.PI * d.x)} />
 
         <VictoryScatter
           data={[
@@ -56,14 +48,18 @@ export default class extends React.Component {
         <VictoryScatter
           style={{
             data: {
-              fill: data => (data.y > 0 ? "red" : "blue")
+              fill: d => (d.y > 0 ? "red" : "blue")
             }
           }}
-          symbol={data => (data.y > 0 ? "triangleUp" : "triangleDown")}
+          symbol={d => (d.y > 0 ? "triangleUp" : "triangleDown")}
           y={d => Math.sin(2 * Math.PI * d.x)}
           samples={25}
         />
-      </ScrollView>
-    );
-  }
+      </View>
+    </ScrollView>
+  );
 }
+
+ScatterView.navigationOptions = {
+  headerTitle: "VictoryScatter"
+};

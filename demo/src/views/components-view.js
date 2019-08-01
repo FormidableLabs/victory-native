@@ -40,36 +40,34 @@ const sections = [
   }
 ];
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "Victory Native Demo"
-  };
-
-  static propTypes = {
-    navigation: PropTypes.object.isRequired
-  };
-
-  render() {
-    return (
-      <SectionList
-        style={styles.container}
-        sections={sections}
-        renderSectionHeader={({ section }) => (
-          <View style={styles.sectionHeader}>
-            <Text style={styles.sectionHeaderText}>{section.title}</Text>
+export default function ComponentsView() {
+  return (
+    <SectionList
+      style={styles.container}
+      sections={sections}
+      renderSectionHeader={({ section }) => (
+        <View style={styles.sectionHeader}>
+          <Text style={styles.sectionHeaderText}>{section.title}</Text>
+        </View>
+      )}
+      renderItem={({ item }) => (
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate(item.key)}
+        >
+          <View style={styles.item}>
+            <Text style={styles.itemText}>{item.title}</Text>
+            {Platform.select({ ios: <ChevronIcon /> })}
           </View>
-        )}
-        renderItem={({ item }) => (
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate(item.key)}
-          >
-            <View style={styles.item}>
-              <Text style={styles.itemText}>{item.title}</Text>
-              {Platform.select({ ios: <ChevronIcon /> })}
-            </View>
-          </TouchableOpacity>
-        )}
-      />
-    );
-  }
+        </TouchableOpacity>
+      )}
+    />
+  );
 }
+
+ComponentsView.navigationOptions = {
+  headerTitle: "Victory Native Demo"
+};
+
+ComponentsView.propTypes = {
+  navigation: PropTypes.object.isRequired
+};

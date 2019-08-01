@@ -56,32 +56,30 @@ const legendData = [
 
 const legendStyle = { border: { stroke: "black" } };
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "Legends"
-  };
-
-  render() {
-    return (
-      <ScrollView style={viewStyles.container}>
-        <Svg width={Dimensions.get("window").width} height={300}>
-          <VictoryLegend
-            x={5}
-            y={10}
-            standalone={false}
-            data={legendData}
-            style={legendStyle}
-          />
-          <VictoryLegend
-            x={5}
-            y={200}
-            data={legendData}
-            standalone={false}
-            itemsPerRow={3}
-            style={legendStyle}
-          />
-        </Svg>
-      </ScrollView>
-    );
-  }
+export default function LegendsView() {
+  return (
+    <ScrollView style={viewStyles.container}>
+      <Svg width={Dimensions.get("window").width} height={300}>
+        <VictoryLegend
+          x={5}
+          y={10}
+          standalone={false}
+          data={legendData}
+          style={legendStyle}
+        />
+        <VictoryLegend
+          x={5}
+          y={200}
+          data={legendData}
+          standalone={false}
+          itemsPerRow={3}
+          style={legendStyle}
+        />
+      </Svg>
+    </ScrollView>
+  );
 }
+
+LegendsView.navigationOptions = {
+  headerTitle: "Legends"
+};

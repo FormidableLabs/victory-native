@@ -1,19 +1,16 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { VictoryBar, VictoryGroup, VictoryStack } from "victory-native";
 import viewStyles from "../styles/view-styles";
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "VictoryBar"
-  };
-
-  render() {
-    return (
-      <ScrollView style={viewStyles.container}>
+export default function BarView() {
+  return (
+    <ScrollView style={viewStyles.container}>
+      <View pointerEvents="none">
         <VictoryBar />
 
-        <VictoryBar polar
+        <VictoryBar
+          polar
           data={[
             { x: 1, y: 1 },
             { x: 2, y: 2 },
@@ -56,7 +53,11 @@ export default class extends React.Component {
             { x: 5, y: 1 }
           ]}
         />
-      </ScrollView>
-    );
-  }
+      </View>
+    </ScrollView>
+  );
 }
+
+BarView.navigationOptions = {
+  headerTitle: "VictoryBar"
+};
