@@ -40,7 +40,7 @@ const sections = [
   }
 ];
 
-export default function ComponentsView() {
+export default function ComponentsView(props) {
   return (
     <SectionList
       style={styles.container}
@@ -51,9 +51,7 @@ export default function ComponentsView() {
         </View>
       )}
       renderItem={({ item }) => (
-        <TouchableOpacity
-          onPress={() => this.props.navigation.navigate(item.key)}
-        >
+        <TouchableOpacity onPress={() => props.navigation.navigate(item.key)}>
           <View style={styles.item}>
             <Text style={styles.itemText}>{item.title}</Text>
             {Platform.select({ ios: <ChevronIcon /> })}
