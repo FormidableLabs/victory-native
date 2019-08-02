@@ -6,40 +6,35 @@ import { generateRandomData } from "../data";
 
 const VictoryZoomVoronoiContainer = createContainer("zoom", "voronoi");
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "Custom Containers"
-  };
+export default function CreateContainersView() {
+  const [scrollEnabled, setScrollEnabled] = React.useState(true);
+  const randomData = React.useRef(generateRandomData());
 
-  state = {
-    scrollEnabled: true
-  };
-
-  changeScroll = scrollEnabled => this.setState({ scrollEnabled });
-
-  render() {
-    return (
-      <ScrollView
-        style={viewStyles.container}
-        contentContainerStyle={viewStyles.contentContainer}
-        scrollEnabled={this.state.scrollEnabled}
+  return (
+    <ScrollView
+      style={viewStyles.container}
+      contentContainerStyle={viewStyles.contentContainer}
+      scrollEnabled={scrollEnabled}
+    >
+      <Text style={[viewStyles.header, viewStyles.monospace]}>
+        {'createContainer("zoom", "voronoi")'}
+      </Text>
+      <VictoryChart
+        containerComponent={
+          <VictoryZoomVoronoiContainer
+            onTouchStart={() => setScrollEnabled(false)}
+            onTouchEnd={() => setScrollEnabled(true)}
+            labels={d => `( ${d.x} , ${d.y} )`}
+            dimension={"x"}
+          />
+        }
       >
-        <Text style={[viewStyles.header, viewStyles.monospace]}>
-          {'createContainer("zoom", "voronoi")'}
-        </Text>
-        <VictoryChart
-          containerComponent={
-            <VictoryZoomVoronoiContainer
-              onTouchStart={() => this.changeScroll(false)}
-              onTouchEnd={() => this.changeScroll(true)}
-              labels={d => `( ${d.x} , ${d.y} )`}
-              dimension={"x"}
-            />
-          }
-        >
-          <VictoryScatter data={generateRandomData()} />
-        </VictoryChart>
-      </ScrollView>
-    );
-  }
+        <VictoryScatter data={randomData.current} />
+      </VictoryChart>
+    </ScrollView>
+  );
 }
+
+CreateContainersView.navigationOptions = {
+  headerTitle: "Custom Containers"
+};

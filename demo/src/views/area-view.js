@@ -1,38 +1,29 @@
-/*global setInterval*/
+/*global setInterval clearInterval*/
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { VictoryArea, VictoryGroup, VictoryStack } from "victory-native";
 import viewStyles from "../styles/view-styles";
 import { getData } from "../data";
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "VictoryArea"
-  };
+export default function AreaView() {
+  const [data, setData] = React.useState(getData());
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: getData()
+  React.useEffect(() => {
+    const updateDataHandle = setInterval(() => {
+      setData(getData());
+    }, 3000);
+    return () => {
+      clearInterval(updateDataHandle);
     };
-  }
+  }, []);
 
-  componentDidMount() {
-    setInterval(this.updateDemoData.bind(this), 3000);
-  }
+  return (
+    <ScrollView style={viewStyles.container}>
+      <View pointerEvents="none">
+        <VictoryArea />
 
-  updateDemoData() {
-    this.setState({
-      data: getData()
-    });
-  }
-
-  render() {
-    return (
-      <ScrollView style={viewStyles.container}>
-        <VictoryArea/>
-
-        <VictoryArea polar
+        <VictoryArea
+          polar
           data={[
             { x: 1, y: 1 },
             { x: 2, y: 2 },
@@ -53,13 +44,13 @@ export default class extends React.Component {
             { amount: 5, yield: 1, error: 1.5 }
           ]}
           x={"amount"}
-          y={data => data.yield + data.error}
+          y={d => d.yield + d.error}
         />
 
         <VictoryArea
           interpolation="basis"
           animate={{ duration: 1500 }}
-          data={this.state.data}
+          data={data}
         />
 
         <VictoryGroup
@@ -129,7 +120,11 @@ export default class extends React.Component {
             data={[{ x: 1, y: 3 }, { x: 2, y: 4 }, { x: 3, y: 2 }]}
           />
         </VictoryStack>
-      </ScrollView>
-    );
-  }
+      </View>
+    </ScrollView>
+  );
 }
+
+AreaView.navigationOptions = {
+  headerTitle: "VictoryArea"
+};

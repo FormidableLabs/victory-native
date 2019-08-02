@@ -1,6 +1,6 @@
-/*global setInterval*/
+/*global setInterval clearInterval*/
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import {
   VictoryChart,
   VictoryBar,
@@ -26,31 +26,23 @@ const candleData = [
   { x: 8, open: 80, close: 81, high: 83, low: 75 }
 ];
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "VictoryChart"
-  };
+export default function ChartView() {
+  const [transitionData, setTransitionData] = React.useState(
+    getTransitionData()
+  );
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      transitionData: getTransitionData()
+  React.useEffect(() => {
+    const updateDataHandle = setInterval(() => {
+      setTransitionData(getTransitionData());
+    }, 3000);
+    return () => {
+      clearInterval(updateDataHandle);
     };
-  }
+  }, []);
 
-  componentDidMount() {
-    setInterval(this.updateDemoData.bind(this), 3000);
-  }
-
-  updateDemoData() {
-    this.setState({
-      transitionData: getTransitionData()
-    });
-  }
-
-  render() {
-    return (
-      <ScrollView style={viewStyles.container}>
+  return (
+    <ScrollView style={viewStyles.container}>
+      <View pointerEvents="none">
         <VictoryChart>
           <VictoryBar />
           <VictoryLine />
@@ -80,7 +72,7 @@ export default class extends React.Component {
 
         <VictoryChart>
           <VictoryScatter
-            labelComponent={<VictoryTooltip/>}
+            labelComponent={<VictoryTooltip />}
             data={[
               {
                 x: 1,
@@ -125,14 +117,12 @@ export default class extends React.Component {
           />
         </VictoryChart>
         <VictoryChart animate={{ duration: 2000 }}>
-          <VictoryArea
-            data={this.state.transitionData}
-          />
+          <VictoryArea data={transitionData} />
         </VictoryChart>
         <VictoryChart animate={{ duration: 2000 }}>
           <VictoryBar
             labels={() => "Hi"}
-            data={this.state.transitionData}
+            data={transitionData}
             style={{
               data: {
                 fill: "tomato",
@@ -192,7 +182,11 @@ export default class extends React.Component {
             />
           </VictoryStack>
         </VictoryChart>
-      </ScrollView>
-    );
-  }
+      </View>
+    </ScrollView>
+  );
 }
+
+ChartView.navigationOptions = {
+  headerTitle: "VictoryChart"
+};

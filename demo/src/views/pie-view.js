@@ -1,40 +1,30 @@
-/*global setInterval*/
+/*global setInterval clearInterval*/
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { VictoryPie } from "victory-native";
 import viewStyles from "../styles/view-styles";
 import { generateRandomData } from "../data";
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "VictoryPie"
-  };
+export default function PieView() {
+  const [data, setData] = React.useState(generateRandomData());
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      randomData: generateRandomData()
+  React.useEffect(() => {
+    const updateDataHandle = setInterval(() => {
+      setData(generateRandomData());
+    }, 3000);
+    return () => {
+      clearInterval(updateDataHandle);
     };
-  }
+  }, []);
 
-  componentDidMount() {
-    setInterval(this.updateDemoData.bind(this), 3000);
-  }
-
-  updateDemoData() {
-    this.setState({
-      randomData: generateRandomData()
-    });
-  }
-
-  render() {
-    return (
-      <ScrollView style={viewStyles.container}>
+  return (
+    <ScrollView style={viewStyles.container}>
+      <View pointerEvents="none">
         <VictoryPie
           innerRadius={75}
           labelRadius={125}
           style={{ labels: { fontSize: 20 } }}
-          data={this.state.randomData}
+          data={data}
           animate={{ duration: 1500 }}
         />
 
@@ -87,8 +77,8 @@ export default class extends React.Component {
         <VictoryPie
           style={{
             data: {
-              stroke: data => (data.y > 75 ? "black" : "none"),
-              opacity: data => (data.y > 75 ? 1 : 0.4)
+              stroke: d => (d.y > 75 ? "black" : "none"),
+              opacity: d => (d.y > 75 ? 1 : 0.4)
             }
           }}
           data={[
@@ -98,7 +88,11 @@ export default class extends React.Component {
             { x: "Bird", y: 55 }
           ]}
         />
-      </ScrollView>
-    );
-  }
+      </View>
+    </ScrollView>
+  );
 }
+
+PieView.navigationOptions = {
+  headerTitle: "VictoryPie"
+};

@@ -1,40 +1,31 @@
-/*global setInterval*/
+/*global setInterval clearInterval*/
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { VictoryLine } from "victory-native";
 import { getStyles, getYFunction } from "../data";
 import viewStyles from "../styles/view-styles";
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "VictoryLine"
-  };
+export default function LineView() {
+  const [y, setY] = React.useState(getYFunction);
+  const [styles, setStyles] = React.useState(getStyles());
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      y: getYFunction(),
-      styles: getStyles()
+  React.useEffect(() => {
+    const updateDataHandle = setInterval(() => {
+      setY(getYFunction);
+      setStyles(getStyles());
+    }, 3000);
+    return () => {
+      clearInterval(updateDataHandle);
     };
-  }
+  }, []);
 
-  componentDidMount() {
-    setInterval(this.updateDemoData.bind(this), 3000);
-  }
-
-  updateDemoData() {
-    this.setState({
-      y: getYFunction(),
-      styles: getStyles()
-    });
-  }
-
-  render() {
-    return (
-      <ScrollView style={viewStyles.container}>
+  return (
+    <ScrollView style={viewStyles.container}>
+      <View pointerEvents="none">
         <VictoryLine />
 
-        <VictoryLine polar
+        <VictoryLine
+          polar
           data={[
             { x: 0, y: 1 },
             { x: 1, y: 3 },
@@ -87,8 +78,8 @@ export default class extends React.Component {
           style={{
             data: {
               stroke: data => {
-                const y = data.map(d => d.y);
-                return Math.max(...y) > 2 ? "red" : "blue";
+                const strokeY = data.map(d => d.y);
+                return Math.max(...strokeY) > 2 ? "red" : "blue";
               }
             }
           }}
@@ -118,12 +109,16 @@ export default class extends React.Component {
         />
 
         <VictoryLine
-          style={{ data: this.state.style }}
+          style={{ data: styles }}
           interpolation="basis"
           animate={{ duration: 1500 }}
-          y={this.state.y}
+          y={y}
         />
-      </ScrollView>
-    );
-  }
+      </View>
+    </ScrollView>
+  );
 }
+
+LineView.navigationOptions = {
+  headerTitle: "VictoryLine"
+};

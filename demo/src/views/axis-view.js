@@ -1,17 +1,13 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { VictoryAxis } from "victory-native";
 import Svg from "react-native-svg";
 import viewStyles from "../styles/view-styles";
 
-export default class extends React.Component {
-  static navigationOptions = {
-    headerTitle: "Axis"
-  };
-
-  render() {
-    return (
-      <ScrollView style={viewStyles.container}>
+export default function AxisView() {
+  return (
+    <ScrollView style={viewStyles.container}>
+      <View pointerEvents="none">
         <VictoryAxis height={100} />
 
         <VictoryAxis
@@ -53,7 +49,11 @@ export default class extends React.Component {
           scale="log"
           domain={[1, 5]}
         />
-      </ScrollView>
-    );
-  }
+      </View>
+    </ScrollView>
+  );
 }
+
+AxisView.navigationOptions = {
+  headerTitle: "Axis"
+};
