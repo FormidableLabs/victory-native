@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, ScrollView, View } from "react-native";
+import { Text, ScrollView } from "react-native";
 import {
   VictoryBar,
   VictoryAxis,
@@ -11,6 +11,7 @@ import {
   VictoryErrorBar
 } from "victory-native";
 import viewStyles from "../styles/view-styles";
+import VictoryVoronoiContainer from "../../../lib/components/victory-voronoi-container";
 
 export default function ErrorsTooltipsView() {
   return (
@@ -31,7 +32,7 @@ export default function ErrorsTooltipsView() {
         ]}
       />
       <Text style={viewStyles.header}>{"Tooltips"}</Text>
-      <VictoryChart>
+      <VictoryChart containerComponent={<VictoryVoronoiContainer />}>
         <VictoryScatter
           labelComponent={<VictoryTooltip />}
           data={[
@@ -75,8 +76,7 @@ export default function ErrorsTooltipsView() {
               label: "Black"
             }
           ]}
-        />
-      </VictoryChart>
+        /></VictoryChart>
       <VictoryChart
         events={[
           {
