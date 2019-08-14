@@ -8,10 +8,10 @@ import {
   VictoryPortal,
   VictoryScatter,
   VictoryTooltip,
-  VictoryErrorBar
+  VictoryErrorBar,
+  VictoryVoronoiContainer
 } from "victory-native";
 import viewStyles from "../styles/view-styles";
-import VictoryVoronoiContainer from "../../../lib/components/victory-voronoi-container";
 
 export default function ErrorsTooltipsView() {
   return (
@@ -35,6 +35,7 @@ export default function ErrorsTooltipsView() {
       <VictoryChart containerComponent={<VictoryVoronoiContainer />}>
         <VictoryScatter
           labelComponent={<VictoryTooltip />}
+          style={{ data: { fill: d => d.fill } }}
           data={[
             {
               x: 1,
@@ -70,13 +71,14 @@ export default function ErrorsTooltipsView() {
             {
               x: 5,
               y: 5,
-              fill: "black",
+              fill: "green",
               symbol: "triangleUp",
               size: 5,
-              label: "Black"
+              label: "Green"
             }
           ]}
-        /></VictoryChart>
+        />
+      </VictoryChart>
       <VictoryChart
         events={[
           {
