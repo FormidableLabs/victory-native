@@ -1,6 +1,6 @@
 /*global setInterval clearInterval*/
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import { VictoryArea, VictoryGroup, VictoryStack } from "victory-native";
 import viewStyles from "../styles/view-styles";
 import { getData } from "../data";
