@@ -19,6 +19,16 @@ export default function AreaView() {
 
   return (
     <ScrollView style={viewStyles.container}>
+
+      <VictoryArea
+        interpolation="basis"
+        animate={{
+          onLoad: { duration: 3500 },
+          duration: 1500
+        }}
+        data={data}
+      />
+
       <VictoryArea />
 
       <VictoryArea
@@ -44,12 +54,6 @@ export default function AreaView() {
         ]}
         x={"amount"}
         y={d => d.yield + d.error}
-      />
-
-      <VictoryArea
-        interpolation="basis"
-        animate={{ duration: 1500 }}
-        data={data}
       />
 
       <VictoryGroup width={300} height={375} style={{ data: { opacity: 0.3 } }}>

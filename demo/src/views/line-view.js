@@ -1,6 +1,6 @@
 /*global setInterval clearInterval*/
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import { VictoryLine } from "victory-native";
 import { getStyles, getYFunction } from "../data";
 import viewStyles from "../styles/view-styles";
@@ -76,7 +76,7 @@ export default function LineView() {
         width={300}
         style={{
           data: {
-            stroke: data => {
+            stroke: ({ data }) => {
               const strokeY = data.map(d => d.y);
               return Math.max(...strokeY) > 2 ? "red" : "blue";
             }

@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import { VictoryAxis } from "victory-native";
 import Svg from "react-native-svg";
 import viewStyles from "../styles/view-styles";

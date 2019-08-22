@@ -1,6 +1,6 @@
 /*global setInterval clearInterval*/
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import { VictoryPie } from "victory-native";
 import viewStyles from "../styles/view-styles";
 import { generateRandomData } from "../data";
@@ -76,8 +76,8 @@ export default function PieView() {
       <VictoryPie
         style={{
           data: {
-            stroke: d => (d.y > 75 ? "black" : "none"),
-            opacity: d => (d.y > 75 ? 1 : 0.4)
+            stroke: ({ datum }) => (datum.y > 75 ? "black" : "none"),
+            opacity: ({ datum }) => (datum.y > 75 ? 1 : 0.4)
           }
         }}
         data={[

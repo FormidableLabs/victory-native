@@ -48,10 +48,10 @@ export default function ScatterView() {
         <VictoryScatter
           style={{
             data: {
-              fill: d => (d.y > 0 ? "red" : "blue")
+              fill: ({ datum }) => (datum.y > 0 ? "red" : "blue")
             }
           }}
-          symbol={d => (d.y > 0 ? "triangleUp" : "triangleDown")}
+          symbol={({ datum }) => (datum.y > 0 ? "triangleUp" : "triangleDown")}
           y={d => Math.sin(2 * Math.PI * d.x)}
           samples={25}
         />

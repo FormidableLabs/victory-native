@@ -1,6 +1,6 @@
 /*global setInterval clearInterval*/
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import {
   VictoryChart,
   VictoryBar,
@@ -66,6 +66,9 @@ export default function ChartView() {
       <VictoryChart>
         <VictoryScatter
           labelComponent={<VictoryTooltip />}
+          style={{
+            data: { fill: ({ datum }) => datum.fill }
+          }}
           data={[
             {
               x: 1,

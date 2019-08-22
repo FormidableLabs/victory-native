@@ -35,7 +35,7 @@ export default function ContainersView() {
           <VictoryCursorContainer
             onTouchStart={() => setScrollEnabled(false)}
             onTouchEnd={() => setScrollEnabled(true)}
-            cursorLabel={d => `${round(d.x, 2)} , ${round(d.y, 2)}`}
+            cursorLabel={({ datum }) => `${round(datum.x, 2)} , ${round(datum.y, 2)}`}
           />
         }
       >
@@ -72,7 +72,7 @@ export default function ContainersView() {
         <VictoryScatter
           data={randomData.current}
           style={{
-            data: { fill: (d, active) => (active ? "tomato" : "gray") }
+            data: { fill: ({ active }) => (active ? "tomato" : "gray") }
           }}
         />
       </VictoryChart>
@@ -99,7 +99,7 @@ export default function ContainersView() {
           <VictoryVoronoiContainer
             onTouchStart={() => setScrollEnabled(false)}
             onTouchEnd={() => setScrollEnabled(true)}
-            labels={d => `( ${round(d.x, 2)} , ${round(d.y, 2)} )`}
+            labels={({ datum }) => `( ${round(datum.x, 2)} , ${round(datum.y, 2)} )`}
           />
         }
       >

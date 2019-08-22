@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import { VictoryBar, VictoryGroup, VictoryStack } from "victory-native";
 import viewStyles from "../styles/view-styles";
 
@@ -41,7 +41,7 @@ export default function BarView() {
         padding={75}
         style={{
           data: {
-            fill: data => (data.y > 2 ? "red" : "blue")
+            fill: ({ datum }) => (datum.y > 2 ? "red" : "blue")
           }
         }}
         data={[
