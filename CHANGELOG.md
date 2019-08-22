@@ -1,5 +1,17 @@
 # VictoryNative Changelog
 
+## 33.0.0 (2019-08-22)
+
+This PR updates `victory-*` dependencies to version `^33.0.0`. Please see [release notes] (https://github.com/FormidableLabs/victory/releases/tag/v33.0.0) for breaking changes
+
+In addition, this PR adds improvents that require `victory-native@33.0.0` to use `react-native@~0.60.0` and `react-native-svg@^9.0.0`
+
+Infrastructure, performance, and event improvements. Thanks @carlos-kelly!
+- [#487](https://github.com/FormidableLabs/victory-native/pull/487) - Upgrade to RN~0.60.0
+- [#490](https://github.com/FormidableLabs/victory-native/pull/490) - Fix native scroll bugs
+- [#491](https://github.com/FormidableLabs/victory-native/pull/491) - Improve performance with functional primitive components and a memoized `getNativeStyles` hook
+- [#496](https://github.com/FormidableLabs/victory-native/pull/496) - Ensures that scroll events are only blocked when appropriate (_e.g._ zooming)
+
 ## 32.0.2 (2019-04-01)
 
 - [#451](https://github.com/FormidableLabs/victory-native/pull/451) Updates the demo to use `react-native@~0.59.0`. Thanks @ratson
