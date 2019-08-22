@@ -24,7 +24,7 @@ export default function CreateContainersView() {
           <VictoryZoomVoronoiContainer
             onTouchStart={() => setScrollEnabled(false)}
             onTouchEnd={() => setScrollEnabled(true)}
-            labels={d => `( ${d.x} , ${d.y} )`}
+            labels={({ datum }) => `( ${datum.x} , ${datum.y} )`}
             dimension={"x"}
           />
         }

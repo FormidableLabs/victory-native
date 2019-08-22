@@ -35,7 +35,7 @@ export default function ErrorsTooltipsView() {
       <VictoryChart containerComponent={<VictoryVoronoiContainer />}>
         <VictoryScatter
           labelComponent={<VictoryTooltip />}
-          style={{ data: { fill: d => d.fill } }}
+          style={{ data: { fill: ({ datum }) => datum.fill } }}
           data={[
             {
               x: 1,
