@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 33.0.1 (2019-12-01)
+
+- [#516](https://github.com/FormidableLabs/victory-native/pull/516) - copy `role` from `VictoryLabel`. Thanks @gurglet!
+
 ## 33.0.0 (2019-08-22)
 
 This PR updates `victory-*` dependencies to version `^33.0.0`. Please see [release notes] (https://github.com/FormidableLabs/victory/releases/tag/v33.0.0) for breaking changes
