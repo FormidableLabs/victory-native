@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 34.0.0 (2019-12-23)
+
+This PR updates `victory-*` dependencies to version `^34.0.0`. This version uses the context API introduced in `react@16.3.0`
+
 ## 33.0.1 (2019-12-01)
 
 - [#516](https://github.com/FormidableLabs/victory-native/pull/516) - copy `role` from `VictoryLabel`. Thanks @gurglet!
