@@ -20,7 +20,7 @@
   "homepage": "https://github.com/FormidableLabs/victory-native#readme",
   "scripts": {
     "lint": "eslint test/spec/**/*.js lib/**/*.js demo/**/*.js",
-    "test": "mocha --compilers test/compiler.js --recursive test/spec/*.js"
+    "test": "mocha --require test/compiler.js --recursive test/spec/*.js --exit"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",
@@ -40,7 +40,7 @@
     "eslint-plugin-react-hooks": "^1.6.1",
     "metro-bundler": "^0.22.1",
     "metro-react-native-babel-preset": "^0.55.0",
-    "mocha": "^5.0.0",
+    "mocha": "^6.0.0",
     "react": "^16.4.0",
     "react-native": "~0.60.4",
     "react-native-svg": "^9.13.6",
