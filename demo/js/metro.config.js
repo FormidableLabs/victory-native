@@ -1,5 +1,5 @@
 const path = require("path");
-const pkg = require("../package.json");
+const pkg = require("../../package.json");
 
 const providesModuleNodeModules = Object.keys(pkg.dependencies).concat([
   "@babel/runtime",
@@ -10,7 +10,7 @@ const providesModuleNodeModules = Object.keys(pkg.dependencies).concat([
 
 module.exports = {
   projectRoot: __dirname,
-  watchFolders: [path.resolve(__dirname, "../lib")],
+  watchFolders: [path.resolve(__dirname, "../../lib")],
   resolver: {
     providesModuleNodeModules
   },

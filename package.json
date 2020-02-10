@@ -20,7 +20,7 @@
   "homepage": "https://github.com/FormidableLabs/victory-native#readme",
   "scripts": {
     "lint": "eslint test/spec/**/*.js lib/**/*.js demo/**/*.js",
-    "lint-ts": "tsc --project tsconfig.json --noEmit",
+    "lint-ts": "tsc --project tsconfig.json",
     "test": "mocha --require test/compiler.js --recursive test/spec/*.js --exit"
   },
   "devDependencies": {

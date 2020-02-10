@@ -1,11 +1,13 @@
+
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
-    "rootDir": ".",
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "rootDir": "./",
     "module": "es6",
     "target": "es5",
     "jsx": "react-native",
+    "allowJs": true,
     "lib":["ES6"],
     "sourceMap": true,
     "moduleResolution": "node",
@@ -18,14 +20,18 @@
     "strictNullChecks": true,
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noEmit": true
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "esModuleInterop": true
   },
   "include": [
-    "lib/**/*",
-    "demo/ts/**/*"
+    "src/**/*"
   ],
   "exclude": [
-      "node_modules",
-      "**/*.spec.ts"
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
   ]
 }
