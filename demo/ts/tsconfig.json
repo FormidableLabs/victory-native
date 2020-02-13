@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "skipLibCheck": true,
+    "paths": {
+      "victory-native": ["../../lib/index"]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+      "node_modules",
+      "**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": ["formidable/configurations/es6-react"],
+  "plugins":["react-hooks"],
+  "rules": {
+    "react/jsx-pascal-case": 0,
+    "no-magic-numbers": 0,
+    "arrow-parens": 0,
+    "no-use-before-define": 0,
+    "no-invalid-this": 0,
+    "react-hooks/rules-of-hooks": "warn",
+    "react-hooks/exhaustive-deps": "error",
+    // Don't check victory deps until bugfix for NODE_PATH uptream.
+    // https://github.com/benmosher/eslint-plugin-import/issues/142
+    "import/no-unresolved": [
+      2,
+      { "ignore": ["^(builder-|)victory"] }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "tsconfig.json"
+      },
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "no-magic-numbers": "off",
+        "import/no-duplicates": "off",
+        "react/no-multi-comp": "off",
+        "react/sort-comp": "off",
+        "import/no-unresolved": "off"
+      }
+    }
+  ]
+}
