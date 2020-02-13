@@ -5,7 +5,8 @@
     "rootDir": ".",
     "module": "es6",
     "target": "es5",
-    "jsx": "react",
+    "jsx": "react-native",
+    "lib":["ES6"],
     "sourceMap": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -16,7 +17,8 @@
     "noUnusedLocals": true,
     "strictNullChecks": true,
     "strict": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "noEmit": true
   },
   "include": [
     "lib/**/*"

@@ -13,5 +13,5 @@ branches:
 
 script:
   - "yarn lint"
-  - "yarn lint-ts"
+  - "yarn compile-ts"
   - "yarn test"

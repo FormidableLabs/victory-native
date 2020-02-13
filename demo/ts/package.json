@@ -1,0 +1,73 @@
+{
+  "name": "victory-demo-ts",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "cd ios && pod install && cd ../ && node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "demo:ios": "npx react-native run-ios",
+    "compile-ts": "tsc --project tsconfig.json",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-native": "0.60.4",
+    "react-native-gesture-handler": "^1.5.6",
+    "react-native-svg": "^11.0.1",
+    "react-navigation": "3.11.1",
+    "victory-native": "*"
+  },
+  "resolutions": {
+    "victory-area": "^34.1.1",
+    "victory-axis": "^34.1.1",
+    "victory-bar": "^34.1.1",
+    "victory-box-plot": "^34.1.1",
+    "victory-brush-container": "^34.1.1",
+    "victory-brush-line": "^34.1.1",
+    "victory-candlestick": "^34.1.1",
+    "victory-chart": "^34.1.1",
+    "victory-core": "^34.1.1",
+    "victory-create-container": "^34.1.1",
+    "victory-cursor-container": "^34.1.1",
+    "victory-errorbar": "^34.1.1",
+    "victory-group": "^34.1.1",
+    "victory-legend": "^34.1.1",
+    "victory-line": "^34.1.1",
+    "victory-pie": "^34.1.1",
+    "victory-polar-axis": "^34.1.1",
+    "victory-scatter": "^34.1.1",
+    "victory-selection-container": "^34.1.1",
+    "victory-shared-events": "^34.1.1",
+    "victory-stack": "^34.1.1",
+    "victory-tooltip": "^34.1.1",
+    "victory-voronoi": "^34.1.1",
+    "victory-voronoi-container": "^34.1.1",
+    "victory-zoom-container": "^34.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/runtime": "^7.5.0",
+    "@react-native-community/eslint-config": "^0.0.3",
+    "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.2",
+    "@types/react-native": "^0.60.14",
+    "@types/react-test-renderer": "^16.9.0",
+    "babel-jest": "^24.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "jest": "^24.1.0",
+    "metro-react-native-babel-preset": "0.54.1",
+    "react-test-renderer": "16.8.6",
+    "typescript": "3.7.5"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

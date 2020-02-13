@@ -66,7 +66,8 @@ If you'd like to contribute to `victory-native`, you can use the local demo app 
 $ git clone https://github.com/FormidableLabs/victory-native
 $ cd victory-native
 $ yarn install
-$ cd demo
+# To run our typescript demo: cd demo/ts
+$ cd demo/js
 $ yarn install
 $ yarn start
 
