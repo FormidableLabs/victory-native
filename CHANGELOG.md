@@ -1,5 +1,10 @@
 # VictoryNative Changelog
 
+## 34.1.0 (2020-02-13)
+
+- [#533](https://github.com/FormidableLabs/victory-native/pull/533) - Adds typescript type definitions. Thanks @mariano-formidable!
+- [#538](https://github.com/FormidableLabs/victory-native/pull/538) - Adds typescript demos. Thanks @mariano-formidable!
+
 ## 34.0.0 (2019-12-23)
 
 This PR updates `victory-*` dependencies to version `^34.0.0`. This version uses the context API introduced in `react@16.3.0`
