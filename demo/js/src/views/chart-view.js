@@ -179,7 +179,7 @@ export default function ChartView() {
         </VictoryStack>
       </VictoryChart>
 
-      <VictoryChart polar style={{background: {fill: "pink"}}}>
+      <VictoryChart polar style={{ background: { fill: "pink" }}}>
         <VictoryBar />
       </VictoryChart>
     </ScrollView>
