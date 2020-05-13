@@ -9,6 +9,7 @@ import ErrorsTooltipsView from "./views/errors-tooltips-view";
 import AreaView from "./views/area-view";
 import PieView from "./views/pie-view";
 import BarView from "./views/bar-view";
+import HistogramView from "./views/histogram-view";
 import ChartView from "./views/chart-view";
 import LineView from "./views/line-view";
 import ScatterView from "./views/scatter-view";
@@ -20,6 +21,7 @@ const StackNavigator = createStackNavigator(
     AreaView: { screen: AreaView },
     PieView: { screen: PieView },
     BarView: { screen: BarView },
+    HistogramView: { screen: HistogramView },
     BoxPlotView: { screen: BoxPlotView },
     ChartView: { screen: ChartView },
     LineView: { screen: LineView },
