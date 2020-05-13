@@ -22,7 +22,7 @@ export {
 //   export { default as TSpan } from "./components/victory-primitives/tspan";
 //   export { default as Arc } from "./components/victory-primitives/arc";
 //   export { default as Area } from "./components/victory-primitives/area";
-export { default as Background } from "./components/victory-primitives/background";
+  export { NativeBackground as Background } from "./components/victory-primitives/background";
 //   export { default as Bar } from "./components/victory-primitives/bar";
 //   export { default as Border, default as Box } from "./components/victory-primitives/border";
 //   export { default as Candle } from "./components/victory-primitives/candle";
