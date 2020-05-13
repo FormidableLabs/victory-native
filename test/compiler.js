@@ -35,6 +35,7 @@ var shouldCompile = function (fileName) {
     "node_modules/victory-cursor-container",
     "node_modules/victory-errorbar",
     "node_modules/victory-group",
+    "node_modules/victory-histogram",
     "node_modules/victory-legend",
     "node_modules/victory-line",
     "node_modules/victory-pie",

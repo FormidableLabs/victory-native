@@ -18,6 +18,7 @@ const sections = [
       { key: "LineView", title: "VictoryLine" },
       { key: "AreaView", title: "VictoryArea" },
       { key: "BarView", title: "VictoryBar" },
+      { key: "HistogramView", title: "VictoryHistogram" },
       { key: "ScatterView", title: "VictoryScatter" },
       { key: "BoxPlotView", title: "VictoryBoxPlot" }
     ],
