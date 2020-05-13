@@ -14,7 +14,6 @@
     "react-native-gesture-handler": "^1.5.6",
     "react-native-svg": "^11.0.1",
     "react-navigation": "3.11.1",
-    "victory-histogram": "^34.3.0",
     "victory-native": "*"
   },
   "resolutions": {
