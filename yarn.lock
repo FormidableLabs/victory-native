@@ -2499,6 +2499,11 @@ d3-array@^1.2.0:
   resolved "https://registry.yarnpkg.com/d3-array/-/d3-array-1.2.4.tgz#635ce4d5eea759f6f605863dbcfc30edc737f71f"
   integrity sha512-KHW6M86R+FUPYGb3R5XiYjXPq7VzwxZ22buHhAEVG5ztoEcZZMLov530mmccaqA1GghZArjQV46fuc8kUqhhHw==
 
+d3-array@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/d3-array/-/d3-array-2.4.0.tgz#87f8b9ad11088769c82b5ea846bcb1cc9393f242"
+  integrity sha512-KQ41bAF2BMakf/HdKT865ALd4cgND6VcIztVQZUTt0+BH3RWy6ZYnHghVXf6NFjt2ritLr8H1T8LreAAlfiNcw==
+
 d3-collection@1:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/d3-collection/-/d3-collection-1.0.7.tgz#349bd2aa9977db071091c13144d5e4f16b5b310e"
@@ -7344,6 +7349,16 @@ victory-bar@^34.1.1:
     prop-types "^15.5.8"
     victory-core "^34.1.1"
 
+victory-bar@^34.3.0:
+  version "34.3.0"
+  resolved "https://registry.yarnpkg.com/victory-bar/-/victory-bar-34.3.0.tgz#ce2e94e3a3a8349716ef98c8d460b8a78f8192e4"
+  integrity sha512-B09ZjxXIttgS2NE8nNuq15ipg1xrJamwfWcbbXlfZ70DWAMTi1I2gLdUY1uyOXCJrOAESTkDwwZYYzxrhlSlfQ==
+  dependencies:
+    d3-shape "^1.2.0"
+    lodash "^4.17.15"
+    prop-types "^15.5.8"
+    victory-core "^34.3.0"
+
 victory-box-plot@^34.1.1:
   version "34.1.1"
   resolved "https://registry.yarnpkg.com/victory-box-plot/-/victory-box-plot-34.1.1.tgz#119c19bd3601286c017cbdc4fb6153b45d505d1b"
@@ -7409,6 +7424,20 @@ victory-core@^34.1.1:
     prop-types "^15.5.8"
     react-fast-compare "^2.0.0"
 
+victory-core@^34.3.0:
+  version "34.3.0"
+  resolved "https://registry.yarnpkg.com/victory-core/-/victory-core-34.3.0.tgz#a7a64fb28108bd727c391e6a1c3c7ceb03720336"
+  integrity sha512-YApJ8Quaw9LsNZHSNKxJSOYl0x8mzCrzJCAdPYG9M0pQlPgVMQdint5eSHHZm00DBwcAG3poPrvk4zQp2rkQ1w==
+  dependencies:
+    d3-ease "^1.0.0"
+    d3-interpolate "^1.1.1"
+    d3-scale "^1.0.0"
+    d3-shape "^1.2.0"
+    d3-timer "^1.0.0"
+    lodash "^4.17.15"
+    prop-types "^15.5.8"
+    react-fast-compare "^2.0.0"
+
 victory-create-container@^34.1.1:
   version "34.1.1"
   resolved "https://registry.yarnpkg.com/victory-create-container/-/victory-create-container-34.1.1.tgz#bd903624caf9d282a5c62a9767d3154ff7b9a059"
@@ -7449,6 +7478,17 @@ victory-group@^34.1.1:
     prop-types "^15.5.8"
     react-fast-compare "^2.0.0"
     victory-core "^34.1.1"
+
+victory-histogram@^34.3.0:
+  version "34.3.0"
+  resolved "https://registry.yarnpkg.com/victory-histogram/-/victory-histogram-34.3.0.tgz#15e5f689cb7df976f9846e44c937941d8b2d2525"
+  integrity sha512-9QtSIt3c4AF5zlbRmEu/EQpRA0WXq5AXdJWvX5loLps1l16k9a9YB3I3MNn0e0SLhzSZUaTYT5fPLeoER5HrLw==
+  dependencies:
+    d3-array "^2.4.0"
+    lodash "^4.17.15"
+    prop-types "^15.5.8"
+    victory-bar "^34.3.0"
+    victory-core "^34.3.0"
 
 victory-legend@^34.1.1:
   version "34.1.1"
