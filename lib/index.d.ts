@@ -36,10 +36,11 @@ export {
 export { VictoryTooltip, Flyout } from "victory-tooltip";
 //   export { default as Whisker } from "./components/victory-primitives/whisker";
 //   export { default as Portal } from "./components/victory-portal/portal";
-export { VictoryArea } from "victory-area"
+export { VictoryArea } from "victory-area";
 export { VictoryAxis } from "victory-axis";
 //   export { default as VictoryPolarAxis } from "./components/victory-polar-axis";
 export { VictoryBar } from "victory-bar";
+export { VictoryHistogram } from "victory-histogram";
 export { VictoryBoxPlot } from "victory-box-plot";
 export { VictoryGroup } from "victory-group";
 export { VictoryLine } from "victory-line";
@@ -50,7 +51,7 @@ export { VictoryChart } from "victory-chart";
 //   export { default as VictoryCandlestick } from "./components/victory-candlestick";
 //   export { default as VictoryVoronoi } from "./components/victory-voronoi";
 export { VictoryPie } from "victory-pie";
-export { default as VictoryContainer } from './components/victory-container';
+export { default as VictoryContainer } from "./components/victory-container";
 export { VictoryLegend } from "victory-legend";
 //   export { default as NativeHelpers } from "./helpers/native-helpers";
 //   export { default as NativeZoomHelpers } from "./helpers/native-zoom-helpers";

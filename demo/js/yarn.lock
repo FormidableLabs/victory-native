@@ -1689,6 +1689,11 @@ d3-array@^1.2.0:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/d3-array/-/d3-array-1.2.4.tgz#635ce4d5eea759f6f605863dbcfc30edc737f71f"
 
+d3-array@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/d3-array/-/d3-array-2.4.0.tgz#87f8b9ad11088769c82b5ea846bcb1cc9393f242"
+  integrity sha512-KQ41bAF2BMakf/HdKT865ALd4cgND6VcIztVQZUTt0+BH3RWy6ZYnHghVXf6NFjt2ritLr8H1T8LreAAlfiNcw==
+
 d3-collection@1:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/d3-collection/-/d3-collection-1.0.7.tgz#349bd2aa9977db071091c13144d5e4f16b5b310e"
@@ -5787,6 +5792,17 @@ victory-group@^32.0.0, victory-group@^34.3.0:
     react-fast-compare "^2.0.0"
     victory-core "^34.3.0"
     victory-shared-events "^34.3.0"
+
+victory-histogram@^34.3.0:
+  version "34.3.0"
+  resolved "https://registry.yarnpkg.com/victory-histogram/-/victory-histogram-34.3.0.tgz#15e5f689cb7df976f9846e44c937941d8b2d2525"
+  integrity sha512-9QtSIt3c4AF5zlbRmEu/EQpRA0WXq5AXdJWvX5loLps1l16k9a9YB3I3MNn0e0SLhzSZUaTYT5fPLeoER5HrLw==
+  dependencies:
+    d3-array "^2.4.0"
+    lodash "^4.17.15"
+    prop-types "^15.5.8"
+    victory-bar "^34.3.0"
+    victory-core "^34.3.0"
 
 victory-legend@^32.0.0, victory-legend@^34.3.0:
   version "34.3.0"
