@@ -1,5 +1,11 @@
 # VictoryNative Changelog
 
+## 34.3.0 (2020-05-04)
+
+- [#565](https://github.com/FormidableLabs/victory-native/pull/565) - Adds `VictoryHistogram`. Thanks @NgoKnows!
+- [#564](https://github.com/FormidableLabs/victory-native/pull/564) - Adds `Background` primitive for `VictoryChart`. Thanks @maddles and @wsparsons!
+
+
 ## 34.1.0 (2020-02-13)
 
 - [#533](https://github.com/FormidableLabs/victory-native/pull/533) - Adds typescript type definitions. Thanks @mariano-formidable!
