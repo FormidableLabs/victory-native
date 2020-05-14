@@ -6234,10 +6234,10 @@ victory-candlestick@^34.0.0, victory-candlestick@^34.3.0:
     prop-types "^15.5.8"
     victory-core "^34.3.0"
 
-victory-chart@^34.0.0, victory-chart@^34.3.0:
-  version "34.3.0"
-  resolved "https://registry.yarnpkg.com/victory-chart/-/victory-chart-34.3.0.tgz#d6ec6571f7a6902dc398ac8ae2d64aa92390f143"
-  integrity sha512-dtwqlHUG8mKQJjWch2zpOhgfWK+bkV+coV8bJCD1VQQ+nq8i0DoEsK5D9l7L8CxFJFVBVw3UDy4Ar2VpulWMcA==
+victory-chart@^34.0.0, victory-chart@^34.3.3:
+  version "34.3.3"
+  resolved "https://registry.yarnpkg.com/victory-chart/-/victory-chart-34.3.3.tgz#ab0d79b37f42ffc88c5c6574a9ec8c712836e141"
+  integrity sha512-ZC+7Q4E28phclvirQdhNfslNXx3dra9yToi0Lf6QJLfCrRqHRcfdi66itg27k/4fVV1f8VwoN9aeunZ1zBi/uA==
   dependencies:
     lodash "^4.17.15"
     prop-types "^15.5.8"
@@ -6311,6 +6311,19 @@ victory-histogram@^34.3.0:
     d3-array "^2.4.0"
     lodash "^4.17.15"
     prop-types "^15.5.8"
+    victory-bar "^34.3.0"
+    victory-core "^34.3.0"
+
+victory-histogram@^34.3.4:
+  version "34.3.4"
+  resolved "https://registry.yarnpkg.com/victory-histogram/-/victory-histogram-34.3.4.tgz#0ba679f7db232a0196a838574e83de6618c84c9c"
+  integrity sha512-rLySM3zmbnSwGA3IazdMrz5SWXv/RprKB03pQEIQ12A42DVRnMUCmiUfWSoIN8elOrq8mpNcV7cJYyjKJ1SX0A==
+  dependencies:
+    d3-array "^2.4.0"
+    d3-scale "^1.0.0"
+    lodash "^4.17.15"
+    prop-types "^15.5.8"
+    react-fast-compare "^2.0.0"
     victory-bar "^34.3.0"
     victory-core "^34.3.0"
 

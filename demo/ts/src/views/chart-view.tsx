@@ -2,6 +2,7 @@
 import React from "react";
 import { ScrollView } from "react-native";
 import {
+  Background,
   VictoryChart,
   VictoryBar,
   VictoryGroup,
@@ -162,7 +163,11 @@ export default function ChartView() {
           />
         </VictoryStack>
       </VictoryChart>
-      <VictoryChart polar style={{ background: { fill: "pink" } }}>
+      <VictoryChart
+        polar
+        backgroundComponent={<Background />}
+        style={{ background: { fill: "pink" } }}
+      >
         <VictoryBar />
       </VictoryChart>
     </ScrollView>
