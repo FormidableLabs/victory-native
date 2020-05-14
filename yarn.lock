@@ -7465,7 +7465,6 @@ victory-histogram@^34.3.0:
     d3-array "^2.4.0"
     lodash "^4.17.15"
     prop-types "^15.5.8"
-    victory-core "^34.3.0"
     victory-bar "^34.3.0"
     victory-core "^34.3.0"
 
