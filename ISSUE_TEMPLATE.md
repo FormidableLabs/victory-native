@@ -8,7 +8,7 @@
 
 * [ ] I am using the latest version of `victory-native`
 
-* [ ] I have checked to make sure that my versions of `react-native` and `react-native-svg` are compatible with this version of `victory-native`. [Read about version requirements](https://github.com/FormidableLabs/victory-native/blob/master/README.md#peer-dependencies-and-version-requirements)
+* [ ] I have checked to make sure that my versions of `react-native` and `react-native-svg` are compatible with this version of `victory-native`. [Read about version requirements](https://github.com/FormidableLabs/victory-native/blob/main/README.md#peer-dependencies-and-version-requirements)
 
 * [ ] I've searched open issues to make sure I'm not opening a duplicate issue
 
