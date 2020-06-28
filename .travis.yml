@@ -9,7 +9,7 @@ cache: yarn
 
 branches:
   only:
-    - master
+    - main
 
 script:
   - "yarn lint"

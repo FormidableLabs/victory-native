@@ -43,7 +43,7 @@ Infrastructure, performance, and event improvements. Thanks @carlos-kelly!
 
 ## 32.0.0 (2019-03-15)
 
-- Updates to `victory@32.0.0`. Changes described here: https://github.com/FormidableLabs/victory/blob/master/CHANGELOG.md#3200-2019-02-27
+- Updates to `victory@32.0.0`. Changes described here: https://github.com/FormidableLabs/victory/blob/main/CHANGELOG.md#3200-2019-02-27
 
 ## 31.0.0 (2018-11-10)
 
@@ -90,7 +90,7 @@ The `Slice` primitive will still take a `pathFunction` prop, but this prop will 
 ## 30.0.0 (2018-07-23)
 
 - Updates all `victory-*` dependencies to use `30.0.0` versions, including new, more modular packages.
-Please see [Victory's Changelog](https://github.com/FormidableLabs/victory/blob/master/CHANGELOG.md#3000-2018-07-17) for details, and [this blog post](https://formidable.com/blog/2018/victory-is-turning-thirty/) for versioning rationale
+Please see [Victory's Changelog](https://github.com/FormidableLabs/victory/blob/main/CHANGELOG.md#3000-2018-07-17) for details, and [this blog post](https://formidable.com/blog/2018/victory-is-turning-thirty/) for versioning rationale
 - Upgrades `victory-native` for compatibility with `react-native@0.56.0`
 
 Associated Pull Requests:
@@ -177,7 +177,7 @@ Note: This change _does not_ affect tooltips, which exist, but are invisible unt
 
 ## 0.17.0 (2018-02-06)
 
--[250](https://github.com/FormidableLabs/victory-native/pull/250) Refactors all primitive components and updates to `victory@0.25.2` dependencies. See [CHANGELOG](https://github.com/FormidableLabs/victory/blob/master/CHANGELOG.md#0250-2018-02-04).
+-[250](https://github.com/FormidableLabs/victory-native/pull/250) Refactors all primitive components and updates to `victory@0.25.2` dependencies. See [CHANGELOG](https://github.com/FormidableLabs/victory/blob/main/CHANGELOG.md#0250-2018-02-04).
    *Note: `VictoryBrushLine` is not implemented in `victory-native`*
 
 ## 0.16.6 (2018-01-03)
@@ -226,7 +226,7 @@ VictoryChart
 ## 0.15.0 (2017-09-11)
 
 [157](https://github.com/FormidableLabs/victory-native/pull/157) Supports changes related to VictoryLegend
-[More details](https://github.com/FormidableLabs/victory-core/blob/master/CHANGELOG.md#1800-2017-09-09)
+[More details](https://github.com/FormidableLabs/victory-core/blob/main/CHANGELOG.md#1800-2017-09-09)
 
 ## 0.14.0 (2017-07-17)
 
