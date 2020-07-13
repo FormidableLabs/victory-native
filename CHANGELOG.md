@@ -1,5 +1,13 @@
 # VictoryNative Changelog
 
+## 35.0.0 (2020-06-27)
+
+### Label and Theme Improvements!
+
+This release introduces new label features and makes improvements to themes. This release includes breaking style changes. Please double check your label and tooltip styles when upgrading. Polar axes and pie charts may be particularly impacted.
+
+Please see the [main project changelog](https://github.com/FormidableLabs/victory/blob/main/CHANGELOG.md#3500-2020-06-27) for full details
+
 ## 34.3.0 (2020-05-04)
 
 - [#565](https://github.com/FormidableLabs/victory-native/pull/565) - Adds `VictoryHistogram`. Thanks @NgoKnows!
