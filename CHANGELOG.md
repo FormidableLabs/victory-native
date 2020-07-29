@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 35.0.1 (2020-07-29)
+
+Updates all `victory-*` components and adds support for new OUIA props on `VictoryContainer`
+
 ## 35.0.0 (2020-06-27)
 
 ### Label and Theme Improvements!
