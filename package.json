@@ -2,7 +2,10 @@
   "name": "victory-native",
   "version": "35.0.0",
   "description": "Shared libraries and components for Victory",
-  "main": "lib/index.js",
+  "main": "build/commonjs/index.js",
+  "module": "build/module/index.js",
+  "react-native": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib",
     "index.js",
@@ -21,12 +24,22 @@
   "scripts": {
     "lint": "eslint test/spec/**/*.js lib/**/*.js demo/**/*.js && cd demo/ts && eslint src/**/*.{ts,tsx}",
     "compile-ts": "tsc --project tsconfig.json",
-    "test": "mocha --require test/compiler.js --recursive test/spec/*.js --exit"
+    "test": "mocha --require test/compiler.js --recursive test/spec/*.js --exit",
+    "prepare": "bob build"
+  },
+  "@react-native-community/bob": {
+    "source": "lib",
+    "output": "build",
+    "targets": [
+      "commonjs",
+      "module"
+    ]
   },
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@babel/register": "7.5.5",
     "@jonny/react-native-mock": "0.4.0",
+    "@react-native-community/bob": "^0.16.2",
     "@types/react": "^16.9.19",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",

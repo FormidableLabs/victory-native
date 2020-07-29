@@ -32,3 +32,5 @@ npm-debug.log*
 
 # yarn
 package-lock.json
+
+build/
