@@ -1,2 +1,7 @@
-test
-demo
+*
+!/lib
+!/build
+!LICENSE.txt
+!CHANGELOG.md
+!README.md
+!package.json
