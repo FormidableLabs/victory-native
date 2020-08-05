@@ -25,7 +25,8 @@
     "lint": "eslint test/spec/**/*.js lib/**/*.js demo/**/*.js && cd demo/ts && eslint src/**/*.{ts,tsx}",
     "compile-ts": "tsc --project tsconfig.json",
     "test": "mocha --require test/compiler.js --recursive test/spec/*.js --exit",
-    "prepare": "bob build"
+    "prepare": "bob build",
+    "preversion": "yarn lint && yarn prepare"
   },
   "@react-native-community/bob": {
     "source": "lib",
