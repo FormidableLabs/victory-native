@@ -1,6 +1,7 @@
 *
 !/lib
 !/build
+build/*.map
 !LICENSE.txt
 !CHANGELOG.md
 !README.md
