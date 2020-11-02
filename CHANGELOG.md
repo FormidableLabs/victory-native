@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 35.3.0 (2020-11-02)
+
+Updates all `victory-*` components and adds `accessibleLabel` attributes to primitive components that match `aria-label` props.
+
 ## 35.0.1 (2020-07-29)
 
 Updates all `victory-*` components and adds support for new OUIA props on `VictoryContainer`
