@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 35.3.1 (2020-11-10)
+
+- [#611](https://github.com/FormidableLabs/victory-native/pull/611) - Adds a temporary fix for a bug in `react-native-svg` that is causing events on the parent Svg to not be triggered in some circumstances
+
 ## 35.3.0 (2020-11-02)
 
 Updates all `victory-*` components and adds `accessibleLabel` attributes to primitive components that match `aria-label` props.
