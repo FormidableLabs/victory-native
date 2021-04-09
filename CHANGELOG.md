@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 35.3.2 (2021-04-08)
+
+- [#633](https://github.com/FormidableLabs/victory-native/pull/633) - Fixes a bug in native-specific types for `VictoryContainer`
+
 ## 35.3.1 (2020-11-10)
 
 - [#611](https://github.com/FormidableLabs/victory-native/pull/611) - Adds a temporary fix for a bug in `react-native-svg` that is causing events on the parent Svg to not be triggered in some circumstances
