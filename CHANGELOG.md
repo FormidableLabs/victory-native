@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 35.3.3 (2021-05-05)
+
+- [#639](https://github.com/FormidableLabs/victory-native/pull/639) - Fixes a bug in native-specific types for container components
+
 ## 35.3.2 (2021-04-08)
 
 - [#633](https://github.com/FormidableLabs/victory-native/pull/633) - Fixes a bug in native-specific types for `VictoryContainer`
