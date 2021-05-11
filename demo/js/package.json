@@ -2,7 +2,7 @@
   "name": "victory-demo",
   "version": "0.0.2",
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
     "react": "16.8.6",
     "react-native": "0.60.4",
