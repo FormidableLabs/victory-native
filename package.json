@@ -46,7 +46,7 @@
     "metro-react-native-babel-preset": "^0.55.0",
     "mocha": "^6.0.0",
     "react": "^16.4.0",
-    "react-native": "~0.60.4",
+    "react-native": "~0.62.3",
     "react-native-svg": "^12.1.0",
     "react-native-svg-mock": "^2.0.0",
     "react-navigation": "^1.0.0",
