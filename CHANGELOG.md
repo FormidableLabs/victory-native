@@ -1,5 +1,9 @@
 # VictoryNative Changelog
 
+## 35.5.5 (2021-09-17)
+
+- [#689](https://github.com/FormidableLabs/victory-native/pull/689) - unpin `victory` versions
+
 ## 35.5.4 (2021-08-26)
 
 - [#676](https://github.com/FormidableLabs/victory-native/pull/676) - Pin `victory` to `35.10.x` as a bandaid until we get a full bugfix for `35.11.1`.
