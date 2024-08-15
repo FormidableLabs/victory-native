@@ -2,6 +2,7 @@
 
 ## This repo has moved! 
 
-Victory Native is now part of the main Victory monorepo, and can be found [here](https://github.com/FormidableLabs/victory/tree/main/packages/victory-native)
+Victory Native is now named [Victory Native XL](https://github.com/FormidableLabs/victory-native-xl).
 
-Issues pertaining to Victory Native should be opened in the main Victory repo [here](https://github.com/FormidableLabs/victory/issues)
+For legacy versions of Victory Native and the core Victory project, [please see this repo](https://github.com/FormidableLabs/victory/tree/main/packages/victory-native).
+
